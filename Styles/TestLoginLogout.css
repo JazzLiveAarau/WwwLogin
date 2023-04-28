@@ -1,0 +1,40 @@
+/* 
+File: TestLoginLogout.css Date: 2023-04-28
+
+Author: Gunnar Liden
+
+Defines styles for the test application of the member login-logout menu
+
+*/
+
+/* Page <div> element for the test application */
+.cl_test_page
+{
+    border: solid 2px blue;
+    font-family: 'Arial';
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 670px;
+}
+
+/* Header <div> element */
+.cl_test_header
+{
+    /* border: solid 2px yellow; */
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 0, 40);
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Picture <img> element in <div> element header */
+.cl_test_header img
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
