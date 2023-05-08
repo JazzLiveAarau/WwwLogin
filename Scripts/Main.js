@@ -1,5 +1,5 @@
 // File: Main.js
-// Date: 2023-05-06
+// Date: 2023-05-08
 // Author: Gunnar Lidén
 
 // Inhalt
@@ -11,9 +11,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// Start Global Parameters /////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
-
-// Instance of application XML
-var g_application_xml = null;
 
 // Instance of the class WebLoginLogout
 var g_web_login_logout = null;
@@ -27,45 +24,43 @@ var g_web_login_logout = null;
 ///////////////////////// Start Main Functions ////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-// Main (onload) function for the test application 
+// Main (onload) function for the login-logout test application 
+// 1. Set the array of elements that shall be displayed only after login
+// 2. Instantiate the class WebLoginLogout. Set g_web_login_logout.
+// 3. 
 function initTestLogin()
 {
-    //QQQ g_application_xml = new JazzApplicationXml(initTestAfterXml);
-
     var hide_display_elements = [];
     hide_display_elements[0] = getDivElementTestControlOne();
-    hide_display_elements[1] = getDivElementTestControlOne();
+    hide_display_elements[1] = getDivElementTestControlTwo();
 
     g_web_login_logout = new WebLoginLogout(getIdDivLoginLogout(), 
-                          hide_display_elements, createWebLoginLogoutControlsAfterLoadOfXml);
+                          hide_display_elements);
 
-    g_web_login_logout.createControls();
+    g_web_login_logout.loadXml();
 
 } // initTestLoginLogout
 
-/*QQQQQQ
-// Callback function after load of application XML
-function initTestAfterXml()
-{
-    var hide_display_elements = [];
-    hide_display_elements[0] = getDivElementTestControlOne();
-    hide_display_elements[1] = getDivElementTestControlOne();
-
-    g_web_login_logout = new WebLoginLogout(g_application_xml, getIdDivLoginLogout(), 
-                          hide_display_elements, createWebLoginLogoutControlsAfterLoadOfXml);
-
-    g_web_login_logout.createControls();
-
-} // initTestAfterXml
-QQQQ*/
-
 // Callback function after the creation of the application XML object
-function createWebLoginLogoutControlsAfterLoadOfXml()
+function createLoginLogoutControlsAfterLoadOfXml()
 {
-    g_web_login_logout.createWebLoginLogoutControlsAfterLoadOfXml();
+    g_web_login_logout.createLoginLogoutControlsAfterLoadOfXml();
    
 
 } // initTestAfterObjectCreation
+
+// Event function user clicked the login-logout button
+function onClickWebLoginLogoutButton()
+{
+    g_web_login_logout.onClickWebLoginLogoutButton();
+
+} // onClickWebLoginLogoutButton
+
+function callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
+{
+    g_web_login_logout.callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg);
+    
+} // callbackOnClickWebLoginLogoutButton
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// End Main Functions //////////////////////////////////////////////
