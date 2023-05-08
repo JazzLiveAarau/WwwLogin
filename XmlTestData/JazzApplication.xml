@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--  JAZZ live AARAU Application data -->
+<AppData>
+  <PublishSeasonStartYear>2022</PublishSeasonStartYear>
+  <AboutUsHeader>Konzept</AboutUsHeader>
+  <AboutUsOne>Die von JAZZ live AARAU veranstalteten Konzerte finden zwischen Oktober und März statt. Der Salmensaal des Restaurants Spagi by Marcello in Aarau eignet sich dafür optimal. Er verfügt über ein angenehmes Ambiente und eine gute Akustik. Die Anlässe finden jeweils am Samstagnachmittag zwischen 15:30 und 17:30 Uhr statt.</AboutUsOne>
+  <AboutUsTwo>Die Programmverantwortlichen legen Wert auf abwechslungsreiche sowie anspruchsvolle Musik. Dass diese einen Bezug zur Jazz- wie auch europäischen Musiktradition zeigt, ist in der aktuellen Jazzszene selbstverständlich. Die Auftritte sind spannend sowie unterhaltend, was uns vom Publikum jeweils unmittelbar bestätigt wird.</AboutUsTwo>
+  <AboutUsThree>JAZZ live AARAU präsentiert seinen Gästen vorwiegend das ausgezeichnete einheimische Musikschaffen. </AboutUsThree>
+  <RequestCaption>Anfragen</RequestCaption>
+  <RequestHeader>Anfrage für einen Auftritt</RequestHeader>
+  <RequestDatesDisplay>FALSE</RequestDatesDisplay>
+  <RequestNoDatesText>&lt;br&gt;&lt;br&gt;Liebe Musikerinnen &amp; Musiker
+&lt;br&gt;&lt;br&gt;Das Programm für die Saison 2023-2024 ist komplett. Anfragen für die übernächste Saison 2024-2025 werden erst wieder ab Oktober 2023 entgegen genommen und beantwortet. Bis dann werden auch die konkreten Gigdaten aufgeschaltet sein.
+&lt;br&gt;&lt;br&gt;Euer JAZZ live AARAU Team</RequestNoDatesText>
+  <RequestDatesText>Dear international artists and bookers!
+JAZZ live AARAU focuses on the swiss jazz scene. We can only accept booking requests from swiss jazz bands, bands that are prominent in the swiss jazz scene or bands with a swiss leader. We focus on the local jazz scene and especially support new projects and younger bands.
+
+Liebe internationale Künstler und Booker!
+JAZZ live AARAU bucht vorwiegend Schweizer Jazz Bands, Bands, die in der Schweizer Jazzszene aktiv sind oder die eine/n Schweizer Bandleader/in haben. Wir richten unseren Fokus auf die lokale Jazzszene und programmieren auch neue Projekte und jüngere Bands.
+
+Spieldaten der nächsten Saison 2023-2024 sind:</RequestDatesText>
+  <RequestContentHeader>Aufritte jeweils Samstag, 15:30 bis 17:30 Uhr
+
+Anfragen &lt;b&gt;müssen&lt;/b&gt; folgende Infos enthalten:</RequestContentHeader>
+  <RequestContentOne>
+- Abgleich sämtlicher 12 Spieldaten mit der Band</RequestContentOne>
+  <RequestContentTwo>- Kurzbeschreibung des angebotenen Projekts sowie Kurzbios der beteiligten Musiker/innen</RequestContentTwo>
+  <RequestContentThree>- Tourchronik bzw. -historie mit detaillierten Gigdaten/-orten</RequestContentThree>
+  <RequestContentFour>- Kontaktdaten der Kontaktperson (Name, Postadresse, Telefon)</RequestContentFour>
+  <RequestContentFive>- Webadresse Band</RequestContentFive>
+  <RequestContentSix>- Links zu Videos/Audios oder mp3-Daten per E-Mail</RequestContentSix>
+  <RequestContentSeven>
+Aktuelle CD wird gegebenenfalls durch JAZZ live AARAU angefordert.</RequestContentSeven>
+  <RequestContentEight>NotYetSetNodeValue</RequestContentEight>
+  <RequestContentNine>NotYetSetNodeValue</RequestContentNine>
+  <RequestEmailAddress>anfrage@jazzliveaarau.ch</RequestEmailAddress>
+  <RequestEmailTitle>Bookinganfragen bitte senden an</RequestEmailTitle>
+  <RequestEmailCaption>anfrage@jazzliveaarau.ch</RequestEmailCaption>
+  <RequestEmailRemark>Anfragen über direkte oder private Emailadressen der Vorstandsmitglieder werden ignoriert.</RequestEmailRemark>
+  <RequestEndParagraph>Ein ernsthaftes Anliegen ist es uns, sämtliche Anfragen zur Kenntnis zu nehmen und auch darauf zu antworten. Dies können und wollen wir aber nur bei vollständigen Anfragen gewährleisten. </RequestEndParagraph>
+  <PremisesHeader>Lokal</PremisesHeader>
+  <Premises>Spagi by Marcello</Premises>
+  <PremisesStreet>Metzgergasse 8</PremisesStreet>
+  <PremisesCity>5000 Aarau</PremisesCity>
+  <PremisesWebsite>http://www.spagi.ch</PremisesWebsite>
+  <PremisesTelephone>+41 62 822 23 12</PremisesTelephone>
+  <PremisesPhoto>ImagesForApps/jazz_premises.png</PremisesPhoto>
+  <PremisesMap>ImagesForApps/map_premises.png</PremisesMap>
+  <IconWww>ImagesForApps/icon_www.png</IconWww>
+  <IconVideo>ImagesForApps/icon_video.png</IconVideo>
+  <IconCalendar>ImagesForApps/icon_calender.png</IconCalendar>
+  <IconJazzLiveAarau>ImagesForApps/jazz_live_aarau_logo.png</IconJazzLiveAarau>
+  <IconGalleryOne>ImagesForApps/gallery_one.png</IconGalleryOne>
+  <IconGalleryTwo>ImagesForApps/gallery_two.png</IconGalleryTwo>
+  <IconTextJazzLiveAarau>ImagesForApps/jazz_live_aarau_text.png</IconTextJazzLiveAarau>
+  <IconContact>ImagesForApps/icon_contact.png</IconContact>
+  <IconHelp>ImagesForApps/icon_help.jpg</IconHelp>
+  <IconLogin>ImagesForApps/icon_login.png</IconLogin>
+  <IconNext>ImagesForApps/icon_next.jpg</IconNext>
+  <IconPrevious>ImagesForApps/icon_previous.jpg</IconPrevious>
+  <IconSearch>ImagesForApps/icon_search.jpg</IconSearch>
+  <IconSettings>ImagesForApps/icon_settings.jpg</IconSettings>
+  <IconStatistics>ImagesForApps/icon_statistics.png</IconStatistics>
+  <IconTools>ImagesForApps/icon_tools.jpg</IconTools>
+  <IconWaitLeft>ImagesForApps/icon_wait_left.jpg</IconWaitLeft>
+  <IconWaitMid>ImagesForApps/icon_wait_mid.png</IconWaitMid>
+  <IconWaitRight>ImagesForApps/icon_wait_right.jpg</IconWaitRight>
+  <IconChecked>ImagesForApps/icon_checked.jpg</IconChecked>
+  <IconUnchecked>ImagesForApps/icon_unchecked.jpg</IconUnchecked>
+  <IconCheckedMusician>ImagesForApps/icon_checked_musician.jpg</IconCheckedMusician>
+  <IconUncheckedMusician>ImagesForApps/icon_unchecked_musician.jpg</IconUncheckedMusician>
+  <IconCheckedConcert>ImagesForApps/icon_checked_concert.jpg</IconCheckedConcert>
+  <IconUncheckedConcert>ImagesForApps/icon_unchecked_concert.jpg</IconUncheckedConcert>
+  <IconCheckedText>ImagesForApps/icon_checked_text.jpg</IconCheckedText>
+  <IconUncheckedText>ImagesForApps/icon_unchecked_text.jpg</IconUncheckedText>
+  <IconZip>ImagesForApps/icon_zip.png</IconZip>
+  <IconMemberDefault>ImagesForApps/member_photo_default.png</IconMemberDefault>
+  <IconPosterDefault>ImagesForApps/poster_concert_default.jpg</IconPosterDefault>
+  <IconPosterBigDefault>ImagesForApps/poster_concert_default_big.jpg</IconPosterBigDefault>
+  <IconReservation>ImagesForApps/icon_reservation.png</IconReservation>
+  <IconsFromServerAndroid>false</IconsFromServerAndroid>
+  <SponsorsPoster>Logos/Sponsors_Poster.jpg</SponsorsPoster>
+  <ContactsHeader>Kontakt</ContactsHeader>
+  <IbanHeader>IBAN</IbanHeader>
+  <MusicianRemarkHeader>Bemerkung</MusicianRemarkHeader>
+  <MailHeader>-</MailHeader>
+  <EmailHeader>E-Mail:</EmailHeader>
+  <ReservationHeader>Reservation:</ReservationHeader>
+  <NewsletterHeader>Newsletter:</NewsletterHeader>
+  <WebmasterHeader>Support App und Homepage:</WebmasterHeader>
+  <ClubName>JAZZ live AARAU</ClubName>
+  <MailAddress>-</MailAddress>
+  <EmailJazzLiveAarau>info@jazzliveaarau.ch</EmailJazzLiveAarau>
+  <EmailSubject>Betreff ...</EmailSubject>
+  <EmailText>Bitte ...</EmailText>
+  <AddressText>Adresse:</AddressText>
+  <TelephoneText>Telefon: </TelephoneText>
+  <TelephoneShortText>Tel: </TelephoneShortText>
+  <PlaceholderName>Vorname</PlaceholderName>
+  <PlaceholderPassword>Passwort</PlaceholderPassword>
+  <PlaceholderSearch>Search string</PlaceholderSearch>
+  <EmailReservation>reservation@jazzliveaarau.ch</EmailReservation>
+  <ReservationSubject>Reservation </ReservationSubject>
+  <ReservationText>Reservation 
+---------------------
+Name: 
+Anzahl Personen:
+Gewünschte Plätze:
+Bemerkungen:
+---------------------
+
+
+Bitte beachten, dass reservierte Plätze 10 Minuten vor Konzertbeginn eingenommen werden müssen, sonst werden sie freigegeben.
+</ReservationText>
+  <ReservationDays>350</ReservationDays>
+  <ReservationNotAllowed>FALSE</ReservationNotAllowed>
+  <ReservationNotAllowedText>Es ist noch nicht möglich zu reservieren.</ReservationNotAllowedText>
+  <ReservationUrl>http://www.jazzliveaarau.ch</ReservationUrl>
+  <NewsletterSubject>Reservation </NewsletterSubject>
+  <NewsletterText>Name:  NN     E-Mail Adresse: nn@xyz.ch</NewsletterText>
+  <MoreInfoText>    ...</MoreInfoText>
+  <TelephoneWebmaster>+41 62 823 04 22</TelephoneWebmaster>
+  <EmailWebmaster>hanni.heller@jazzliveaarau.ch</EmailWebmaster>
+  <WebSiteUrl>http://www.jazzliveaarau.ch/</WebSiteUrl>
+  <IntranetUrl>https://www.jazzliveaarau.ch/Tasks/JazzTasksIntranet.htm</IntranetUrl>
+  <UnloadStreet>Ochsengässli</UnloadStreet>
+  <UnloadCity>5000 Aarau</UnloadCity>
+  <ParkingOne>Flösserstrasse 7 Aarau</ParkingOne>
+  <ParkingTwo>Kasernen-Parking, Laurenzenvorstadt</ParkingTwo>
+  <MusicianDocumentsRequestLink>http://www.jazzliveaarau.ch/JazzAnfrage.htm</MusicianDocumentsRequestLink>
+  <MusicianDocumentsContractLink>http://www.jazzliveaarau.ch/Administration/Musiker/Musiker_unterlagen.htm</MusicianDocumentsContractLink>
+  <MusicianConcertInfoLink>http://www.jazzliveaarau.ch/Administration/Konzert/Konzert_musiker.htm</MusicianConcertInfoLink>
+  <MusicianDrivewayPermit>http://jazzliveaarau.ch/Administration/Konzert/Ausnahmebewilligung.pdf</MusicianDrivewayPermit>
+  <LinkTestAndroid>http://www.jazzliveaarau.ch/Administration/Applikationen/Applikationen_app_android_test.htm</LinkTestAndroid>
+  <LinkTodoList>http://www.jazzliveaarau.ch/App/TodoJazzApp.htm</LinkTodoList>
+  <CaptionTestAndroid>Test Android Version</CaptionTestAndroid>
+  <CaptionTodoList>Neue Funktionen und Fehler</CaptionTodoList>
+  <CaptionMusicianDocumentsRequest>Unterlagen für eine Anfrage</CaptionMusicianDocumentsRequest>
+  <CaptionMusicianDocumentsContract>Nach Vertragsabschluss</CaptionMusicianDocumentsContract>
+  <CaptionMusicianConcertInfo>Instruktionen für das Konzert</CaptionMusicianConcertInfo>
+  <CaptionMusicianDrivewayPermit>Zufahrtsbewilligung</CaptionMusicianDrivewayPermit>
+  <CaptionUnloadAddress>Abladeplatz Instrumente (Hintereingang)</CaptionUnloadAddress>
+  <CaptionParkingOne>Parkhaus Flösserplatz</CaptionParkingOne>
+  <CaptionParkingTwo>Parkhaus Kaserne</CaptionParkingTwo>
+  <CaptionProgram>Programm</CaptionProgram>
+  <CaptionProgramBreak>Sommerpause</CaptionProgramBreak>
+  <CaptionProgramNotPublished>Nicht publiziertes Programm</CaptionProgramNotPublished>
+  <CaptionProgramNoData>Programm-Datei (XML) fehlt</CaptionProgramNoData>
+  <CaptionPremises>Lokal</CaptionPremises>
+  <CaptionContact>Kontakt</CaptionContact>
+  <CaptionAbout>Über uns</CaptionAbout>
+  <CaptionWhy>Warum</CaptionWhy>
+  <CaptionAdditionalText>Mehr ...</CaptionAdditionalText>
+  <CaptionTasks>Aufgaben</CaptionTasks>
+  <CaptionTasksShort>Hauptaufgabe</CaptionTasksShort>
+  <CaptionLoginVorstand>Login Vorstand</CaptionLoginVorstand>
+  <CaptionLoginMusician>Login Musiker</CaptionLoginMusician>
+  <CaptionLoginButton>Login</CaptionLoginButton>
+  <CaptionLogoutButton>Logout</CaptionLogoutButton>
+  <CaptionLoginName>Name</CaptionLoginName>
+  <CaptionMembers>Vorstandsmitglieder</CaptionMembers>
+  <CaptionMember>Vorstandsmitglied</CaptionMember>
+  <CaptionEmailMembers>E-Mail an Vorstand</CaptionEmailMembers>
+  <CaptionMusicianInfo>Musiker Information</CaptionMusicianInfo>
+  <CaptionMembersOnly>Vorstand</CaptionMembersOnly>
+  <CaptionMusicianContacts>Kontaktperson der Band</CaptionMusicianContacts>
+  <CaptionLoginPassword>Passwort</CaptionLoginPassword>
+  <CaptionTools>Tools</CaptionTools>
+  <CaptionHelp>Hilfe</CaptionHelp>
+  <CaptionHelpUser>Not yet used</CaptionHelpUser>
+  <CaptionHelpCurrent>Aktuelle Saison</CaptionHelpCurrent>
+  <CaptionHelpXml>XML Dateien</CaptionHelpXml>
+  <CaptionCheckXml>XML Dateien kontrollieren</CaptionCheckXml>
+  <CaptionHelpPhoto>Foto</CaptionHelpPhoto>
+  <CaptionHelpHistory>Vorherige Saisons</CaptionHelpHistory>
+  <CaptionHelpLogin>Login</CaptionHelpLogin>
+  <CaptionHelpVersion>Version</CaptionHelpVersion>
+  <CaptionIntranet>Intranet</CaptionIntranet>
+  <CaptionDistributionDiagram>Häufigkeitsverteilung: Konzerte-Musiker</CaptionDistributionDiagram>
+  <CaptionSeason>Saison</CaptionSeason>
+  <CaptionSponsors>Sponsoren</CaptionSponsors>
+  <CaptionSupporters>Supporter</CaptionSupporters>
+  <TitleMain>Main</TitleMain>
+  <TitleConcert>Konzert</TitleConcert>
+  <TitleLogin>Login</TitleLogin>
+  <TitleMusician>Musiker</TitleMusician>
+  <TitlePoster>Plakat</TitlePoster>
+  <TitleResult>Resultat</TitleResult>
+  <TitleSearch>Suchen</TitleSearch>
+  <HelpDistributionDiagram>Musiker spielten an zwei Konzerten</HelpDistributionDiagram>
+  <Supporters1>Mit dem Betrag von mindestens Fr. 60.- pro Saison sind Sie Supporter und erhalten einen um Fr. 10.- reduzierten Eintrittspreis.</Supporters1>
+  <Supporters2>Sie können den Betrag an einem Konzert bezahlen oder überweisen auf PC 60-523619-3, mit dem Vermerk "Supporter" sowie Namen und Adresse.</Supporters2>
+  <Supporters3>NotYetSetNodeValue</Supporters3>
+  <Supporters4>NotYetSetNodeValue</Supporters4>
+  <HelpUser1>Mit der App kann man das aktuelle Saisonprogramm (PROGRAMM) anschauen. Mit einem Klick auf ein Konzert (dd/mm Konzert) kriegt man Informationen über das Konzert. Häufig gibt es ein Hörbeispiel (Video-Icon) und einen Link zu der Band Website (WWW-Icon). Man kann auch das Konzertplakat anschauen (Plakat-Icon). Für jeden Musiker gibt es normalerweise eine Biografie (Musiker …) und nach einem Konzert  meistens Fotos (Foto-Icons).</HelpUser1>
+  <HelpUser2>Das Kalender-Icon öffnet eine Kalender-App. Für die Anreise kann man LOKAL und die Karte anklicken, worauf sich eine Karten-App öffnet. Auf der KONTAKT Seite kann man in Kontakt mit Vorstandsmitgliedern treten, Support erhalten, Plätze für ein Konzert reservieren und den Newsletter bestellen. ÜBER UNS enthält Informationen über JAZZ live AARAU.</HelpUser2>
+  <HelpUser3>Im Archiv sind über 2000 Fotos von den Konzerten. Mit jedem Klick auf das Logo-Icon wird ein Foto gezeigt.</HelpUser3>
+  <HelpUser4>NotYetSetNodeValue</HelpUser4>
+  <HelpXml1>Für jede Konzertsaison existiert eine XML Datei: JazzProgramm_2015_2016.xml, JazzProgramm_2016_2017.xml,… Eine XML Datei ist einer Excel-Tabelle ähnlich. Sie enthält Daten wie „Name des Konzerts“, Datum, Kurzbeschreibung, etc. Die XML Dateien sind in einem XML Ordner auf dem Server.</HelpXml1>
+  <HelpXml2>Die App holt alle gezeigten Texte und Bilder vom Server. Keinerlei Daten werden in der App (auf dem Telefon) gespeichert, auch nicht die Texte für die grafische Benutzeroberfläche. „Labels“ wie Programm, Kontakt, Musiker Information etc. sind ebenfalls auf dem Server, nämlich in der Datei JazzApplication.xml, gespeichert. Diese Datei enthält auch Daten über die Vorstandsmitglieder, die Spaghetti Factory, Starttexte für E-Mails sowie diesen Hilfe-Text.</HelpXml2>
+  <HelpXml3>Für die neue Saison wird jeweils eine neue XML Datei geschrieben und auf den Server hochgeladen. Die App wird diese XML Datei finden und auf dem Telefon präsentieren.</HelpXml3>
+  <HelpXml4>Wie diese XML Dateien geschrieben, geändert, herunter- sowie hochgeladen werden, ist im JAZZ live AARAU Intranet beschrieben.</HelpXml4>
+  <HelpPhoto1>Es gibt sehr viele Fotos von den Konzerten. Sie sind auf der Homepage (www.jazzliveaarau.ch -&gt; Fotos) zugänglich und mit einem Doppel-Klick auf die kleine Slideshow in der linken oberen Ecke startet eine Slideshow mit grösseren Bilder, d.h. Bilder mit einer höheren Auflösung.</HelpPhoto1>
+  <HelpPhoto2>Es ist in dieser App ziemlich einfach Fotos von einem Musiker zu suchen. Mit der Such-Funktion und Option ‚Musiker‘ werden die Konzerte mit ihm aufgelistet. Mit einem Klick auf die Konzert-Zeile bekommt man Links zu Webseiten, wo man die Fotos anschauen kann.</HelpPhoto2>
+  <HelpPhoto3>Alle auf den Webseiten gezeigten Fotos gibt auch mit der Original-Auflösung auf dem JAZZ live AARAU Server, und dazu viele zusätzliche Fotos vom Konzert. Alle Fotos von einem Konzert sind auf dem Server als eine ZIP-Datei gespeichert. Unter den Foto-Icons gibt es ZIP-Icons.</HelpPhoto3>
+  <HelpPhoto4>Mit einem Klick auf dieses Icon kann man eine E-Mail an den Fotograf schicken und fragen ob man die ZIP-Datei bekommen kann.</HelpPhoto4>
+  <HelpHistory1>Diese App hat auch einige Nostalgie-Funktionen. Das Icon in der oberen linken Ecke bietet die Möglichkeit, zu einem früheren Saisonprogramm zu wechseln.</HelpHistory1>
+  <HelpHistory2>Mit dem Statistik-Icon kann man folgende Statistiken auswählen: Musiker, Musikerinnen, Bands oder Lokale. ‚Musiker‘ wird alle Saison-Programme durchgehen und Musiker zählen (braucht etwas Zeit). Die totale Anzahl Musiker wird gezeigt, auch die Top-6 Musiker und ein Distributions-Diagramm. Die meisten Musiker haben nur einmal bei uns gespielt.</HelpHistory2>
+  <HelpHistory3>Es gibt auch eine Such-Funktion (Such-Icon in der oberen rechten Ecke). Mit einer Musiker-Suche werden alle Konzerte mit diesem Musiker gezeigt. Vollständige Informationen über ein Konzert kriegt man mit einem Klick. Ebenso funktioniert die Band-Suche. Eine Texte-Suche findet das Gewünschte zudem auch in den Konzertbeschreibungen sowie Musikerbiografien.</HelpHistory3>
+  <HelpHistory4>NotYetSetNodeValue</HelpHistory4>
+  <HelpLogin1>Vorstandsmitglieder und Musiker, die von JAZZ live AARAU engagiert sind, können sich einloggen (Login-Icon, zweites von oben links). Das Passwort kriegt man von ‚Support App und Homepage‘ auf der KONTAKT-Seite. Ein Vorstandsmitglied wird ebenfalls als Musiker eingeloggt, d.h. auch die Musiker-Funktionen werden zugänglich.</HelpLogin1>
+  <HelpLogin2>MUSIKER INFORMATION: Auf dieser Seite wird die Kontaktperson des Konzerts, Abladeplatz für die Instrumente und Parkplätze gezeigt. Es gibt auch Links zu Webseiten mit Instruktionen für den Musiker.</HelpLogin2>
+  <HelpLogin3>Ein Vorstandsmitglied kann nach dem Einloggen das (noch nicht publizierte) Programm für die nächste Saison einsehen. Er kriegt auch zusätzliche Informationen über seine MitkollegInnen (KONTAKT-Seite), und auf der Konzertseite gibt es ein weiteres Kontakt-Icon. Ein Klick auf dieses zeigt die Kontaktperson der Band mit Telefonnummer, E-Mail und Postadresse.</HelpLogin3>
+  <HelpLogin4>NotYetSetNodeValue</HelpLogin4>
+  <HelpVersion1>2019-03-24: Konzertjahr wird gezeigt und nich nur Tag und Monat.</HelpVersion1>
+  <HelpVersion2>2019-02-03: Online Reservation implementiert</HelpVersion2>
+  <HelpVersion3>2018-09-19: Neue Fehlermeldung, wenn kein Internet vorhanden ist. Reservation auf den Konzertseiten. Login Vorstand und Musiker werden gespeichert. Sponsoren und Supporter zugefügt. Meldung bevor Herunterladen von XML Dateien für vorherigen Saisons.</HelpVersion3>
+  <HelpVersion4>2017-06-15: Icons werden nicht länger vom Server heruntergeladen, Sie sind im Telefon gespeichert.</HelpVersion4>
+  <HelpVersionIos1>2019-02-27 Online Reservation implementiert</HelpVersionIos1>
+  <HelpVersionIos2>2018-09-28 Neue Fehlermeldung, wenn kein Internet vorhanden ist. Reservation auf den Konzertseiten. Login Vorstand und Musiker werden gespeichert. Sponsoren und Supporter zugefügt. Meldung bevor Herunterladen von XML Dateien für vorherigen Saisons.</HelpVersionIos2>
+  <HelpVersionIos3>2017-06-12 Grafische Änderungen.</HelpVersionIos3>
+  <HelpVersionIos4>2016-12-20 Die App wurde von Apple geprüft und freigegeben</HelpVersionIos4>
+  <IosVersion>1.0.1</IosVersion>
+  <AndroidVersion>2.4.0</AndroidVersion>
+  <PhotoEmailSubject>JAZZ live AARAU Fotos</PhotoEmailSubject>
+  <PhotoEmailBody>Ich habe Interesse an Fotos in der ZIP-Datei: </PhotoEmailBody>
+  <PhotographerOneEmail>fotograf.one@jazzliveaarau.ch</PhotographerOneEmail>
+  <PhotographerTwoEmail>fotograf.two@jazzliveaarau.ch</PhotographerTwoEmail>
+  <LoginFailed>Name oder Passwort falsch</LoginFailed>
+  <LoginMusicianFailed>Passwort ist falsch</LoginMusicianFailed>
+  <LoginMusicianNotPossible>Musiker Login nicht möglich für aktuelle Saison </LoginMusicianNotPossible>
+  <CaptionStatistics>Statistik</CaptionStatistics>
+  <StatisticsMusician>Musiker und Musikerinnen</StatisticsMusician>
+  <StatisticsPremises>Lokale</StatisticsPremises>
+  <StatisticsBand>Bands</StatisticsBand>
+  <StatisticsMembers>Vorstand</StatisticsMembers>
+  <StatisticsBirthyear>Alter</StatisticsBirthyear>
+  <StatisticsGender>Musikerinnen</StatisticsGender>
+  <StatisticsConcerts> Konzerte</StatisticsConcerts>
+  <StatisticsYears> Jahre</StatisticsYears>
+  <NumberMusicians>Gesamtzahl der Musiker</NumberMusicians>
+  <NumberFemale>Gesamtzahl der Musikerinnen</NumberFemale>
+  <NumberPremises>Gesamtzahl der Lokale</NumberPremises>
+  <NumberBands>Gesamtzahl der Bands</NumberBands>
+  <NumberMembers>Gesamtzahl der Vorstandsmitglieder</NumberMembers>
+  <MenuSelectSeason>Saison wählen</MenuSelectSeason>
+  <MenuSelectConcert>Konzerte</MenuSelectConcert>
+  <ErrorInternet>Kein Zugang zum Internet</ErrorInternet>
+  <MsgNotYetImpemented>Funktion ist noch nicht implementiert</MsgNotYetImpemented>
+  <MsgCloseApp>App wird beendet</MsgCloseApp>
+  <MsgLoginNameMissing>Name fehlt</MsgLoginNameMissing>
+  <MsgLoginPasswordMissing>Passwort fehlt</MsgLoginPasswordMissing>
+  <MsgLoginOnlySeason>Login ist nur möglich für Saison </MsgLoginOnlySeason>
+  <MsgDownloadXmlFiles>XML Dateien für vorherige Saisons werden heruntergeladen</MsgDownloadXmlFiles>
+  <SearchOptionMusicians>Musiker</SearchOptionMusicians>
+  <SearchOptionBands>Konzert</SearchOptionBands>
+  <SearchOptionTexts>Texte</SearchOptionTexts>
+  <SearchNoHits>Keine Treffer</SearchNoHits>
+  <SearchNumberOfHits>Anzahl Treffer</SearchNumberOfHits>
+  <SearchStringEmpty>Such-String ist leer</SearchStringEmpty>
+  <SearchAlternativeNotSet>Such-Alternative nicht gewählt</SearchAlternativeNotSet>
+  <CaptionContactPersonConcert>Kontaktperson des Konzerts</CaptionContactPersonConcert>
+  <ContactConcertMemberNumber>1</ContactConcertMemberNumber>
+  <ContactConcertTelephone>+41774341032</ContactConcertTelephone>
+  <ContactConcertEmail>konzert@jazzliveaarau.ch</ContactConcertEmail>
+  <CalendarEventAdded>Ereignis ist in Kalender zugefügt</CalendarEventAdded>
+  <Members>
+    <Member>
+      <Name>Laura</Name>
+      <FamilyName>Cesar</FamilyName>
+      <EmailAddress>laura.cesar@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>lauracesar@gmx.ch</EmailPrivate>
+      <Telephone>+41 79 857 75 13</Telephone>
+      <TelephoneFix>+41 56 610 55 72</TelephoneFix>
+      <Street>Rossweid 11</Street>
+      <City>Büttikon</City>
+      <PostCode>5619</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/LauraCesar.jpg</PhotoSmallSize>
+      <Tasks>Mitglied Programmteam
+Betreuung Musiker</Tasks>
+      <TasksShort>Programm</TasksShort>
+      <Why>Vielbeschäftigte Bassistin mit Ihrer eigenen Band JazzImpuls. In Kanada geboren und seit 1996 in der CH. Dozent für private Kontrabass Studenten sowie Workshops. Genießt Wandern, Radfahren und Lesen von Biografien über Jazzmusiker.</Why>
+      <StartYear>2016</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>arual</Password>
+      <Vorstand>true</Vorstand>
+      <Number>2</Number>
+    </Member>
+    <Member>
+      <Name>Maria</Name>
+      <FamilyName>Gares</FamilyName>
+      <EmailAddress>maria.gares@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>maria.gares@gmx.ch</EmailPrivate>
+      <Telephone>+41 76 377 09 80</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Ziegelrain 3</Street>
+      <City>Aarau</City>
+      <PostCode>5000</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/MariaGares.jpg</PhotoSmallSize>
+      <Tasks>Medien- und Pressearbeit 
+PR</Tasks>
+      <TasksShort>Pressearbeit</TasksShort>
+      <Why>Die Kommunikations-spezialistin widmet sich seit neustem dem Klavierspielen.</Why>
+      <StartYear>2014</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>airam</Password>
+      <Vorstand>true</Vorstand>
+      <Number>8</Number>
+    </Member>
+    <Member>
+      <Name>Philip</Name>
+      <FamilyName>Salathe</FamilyName>
+      <EmailAddress>philip.salathe@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>p.salathe@hispeed.ch</EmailPrivate>
+      <Telephone>+41 79 511 85 03</Telephone>
+      <TelephoneFix>+41 62 892 14 41</TelephoneFix>
+      <Street>Konsumstrasse 5A</Street>
+      <City>Staufen</City>
+      <PostCode>5603</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/PhilipSalathe.jpg</PhotoSmallSize>
+      <Tasks>Mitglied Programmteam
+SUISA
+Kontakt zu Stadt und Kuratorium
+Betreuung der Musiker</Tasks>
+      <TasksShort>Programm</TasksShort>
+      <Why>Neben Studium und Leichtathletik ein leidenschaftlicher Saxofonist, fungiert bei Bedarf als Tontechniker.</Why>
+      <StartYear>2013</StartYear>
+      <EndYear>2022</EndYear>
+      <Password>pilihp</Password>
+      <Vorstand>false</Vorstand>
+      <Number>3</Number>
+    </Member>
+    <Member>
+      <Name>Dora</Name>
+      <FamilyName>Scheidegger</FamilyName>
+      <EmailAddress>Dora.Scheidegger@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>ds-boo-aa@swissonline.ch</EmailPrivate>
+      <Telephone>+41 79 641 78 89</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Halden 8</Street>
+      <City>Aarau</City>
+      <PostCode>5000</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/DoraScheidegger.jpg</PhotoSmallSize>
+      <Tasks>Kasse, Kassenbuch</Tasks>
+      <TasksShort>Kasse</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2013</StartYear>
+      <EndYear>2017</EndYear>
+      <Password>arod</Password>
+      <Vorstand>false</Vorstand>
+      <Number>17</Number>
+    </Member>
+    <Member>
+      <Name>Peter</Name>
+      <FamilyName>Häuptli</FamilyName>
+      <EmailAddress>Peter.Haeuptli@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>peter.haeuptli@sunrise.ch</EmailPrivate>
+      <Telephone>+41 76 355 16 64</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Köllikerstrasse 2C</Street>
+      <City>Oberentfelden</City>
+      <PostCode>5036</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/PeterHauptli.jpg</PhotoSmallSize>
+      <Tasks>Buchhaltung, Postkonto verwalten, Sponsoren suchen und betreuen, Supporter betreuen, Budget und Jahres-Betriebs-Rechnung erstellen, Versicherung</Tasks>
+      <TasksShort>Finanzen</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>1997</StartYear>
+      <EndYear>2018</EndYear>
+      <Password>retep</Password>
+      <Vorstand>false</Vorstand>
+      <Number>18</Number>
+    </Member>
+    <Member>
+      <Name>Alex</Name>
+      <FamilyName>Vimposek</FamilyName>
+      <EmailAddress>alex.vimposek@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>vimposek@blowup.ch</EmailPrivate>
+      <Telephone>+41 79 687 62 88</Telephone>
+      <TelephoneFix>+41 62 296 75 34</TelephoneFix>
+      <Street>Auenstrasse 15</Street>
+      <City>Niedergösgen</City>
+      <PostCode>5013</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/AlexVimposek.jpg</PhotoSmallSize>
+      <Tasks>Künstlerische Leitung</Tasks>
+      <TasksShort>Programm</TasksShort>
+      <Why>Langjähriger Saxlehrer an der Musikschule Frick und seit Ende 2008 real praktizierender Vater. Lässt sich nebenbei von seinem Sohn per Velo über die Alpenpässe hetzen.</Why>
+      <StartYear>2016</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>xela</Password>
+      <Vorstand>true</Vorstand>
+      <Number>1</Number>
+    </Member>
+    <Member>
+      <Name>Gunnar</Name>
+      <FamilyName>Lidén</FamilyName>
+      <EmailAddress>gunnar.liden@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>sven.gunnar.liden@gmail.com</EmailPrivate>
+      <Telephone>+41 77 49 35 994</Telephone>
+      <TelephoneFix>+41 62 823 04 22</TelephoneFix>
+      <Street>Kapellenweg 10</Street>
+      <City>Gränichen</City>
+      <PostCode>5722</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/GunnarLiden.jpg</PhotoSmallSize>
+      <Tasks>Entwicklung und Support von
+Homepage
+Webapplikation Flyer
+Reservationssystem
+JazzApp</Tasks>
+      <TasksShort>Programmierer</TasksShort>
+      <Why>Der gebürtige Schwede ist seit 20 Jahren zuständig für die Website und alles, was mit Computer zu tun hat. Seine Motivation ist die auch in der Pension nicht nachlassende kindliche Freude daran. 
+		</Why>
+      <StartYear>1999</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>rannug</Password>
+      <Vorstand>true</Vorstand>
+      <Number>5</Number>
+    </Member>
+    <Member>
+      <Name>Markus</Name>
+      <FamilyName>Meier</FamilyName>
+      <EmailAddress>markus.meier@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>meier53@hotmail.com</EmailPrivate>
+      <Telephone>+41 62 824 61 05</Telephone>
+      <TelephoneFix>+41 62 824 61 05</TelephoneFix>
+      <Street>Schanzmättelistrasse 37</Street>
+      <City>Aarau</City>
+      <PostCode>5000</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/MarkusMeier.jpg</PhotoSmallSize>
+      <Tasks>Administrative Gesamtleitung
+Konzertfotografie</Tasks>
+      <TasksShort>Fotograf</TasksShort>
+      <Why>Ist dafür bekannt, unbekannt zu sein. Sein Motto: „I press the button, they do the rest“.</Why>
+      <StartYear>2016</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>sukram</Password>
+      <Vorstand>true</Vorstand>
+      <Number>4</Number>
+    </Member>
+    <Member>
+      <Name>Bruno</Name>
+      <FamilyName>Lüthy</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>brunoluethy@pop.agri.ch</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Apperechweg 21</Street>
+      <City>Erlinsbach SO</City>
+      <PostCode>5015</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/MemberName.jpg</PhotoSmallSize>
+      <Tasks>Programm</Tasks>
+      <TasksShort>Bands auswählen, Kontaktperson der Musiker, Musiker am Konzert betreuen, Gesuche, Korrekturlesen</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2010</StartYear>
+      <EndYear>2016</EndYear>
+      <Password>onurb</Password>
+      <Vorstand>false</Vorstand>
+      <Number>16</Number>
+    </Member>
+    <Member>
+      <Name>Georges</Name>
+      <FamilyName>Weiersmüller</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>NotYetSetNodeValue</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>NotYetSetNodeValue</Street>
+      <City>NotYetSetNodeValue</City>
+      <PostCode>NotYetSetNodeValue</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/GeorgesWeiersmueller.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>1996</StartYear>
+      <EndYear>2012</EndYear>
+      <Password>NotYetSetNodeValue</Password>
+      <Vorstand>false</Vorstand>
+      <Number>9</Number>
+    </Member>
+    <Member>
+      <Name>Veronique</Name>
+      <FamilyName>Weiersmüller</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>vweiersmueller@hotmail.com</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>NotYetSetNodeValue</Street>
+      <City>NotYetSetNodeValue</City>
+      <PostCode>NotYetSetNodeValue</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/VeroniqueWeiersmueller.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>1996</StartYear>
+      <EndYear>2013</EndYear>
+      <Password>euqinorev</Password>
+      <Vorstand>false</Vorstand>
+      <Number>10</Number>
+    </Member>
+    <Member>
+      <Name>Werner</Name>
+      <FamilyName>Stähli</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>staehli.werner@bluewin.ch</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>NotYetSetNodeValue</Street>
+      <City>NotYetSetNodeValue</City>
+      <PostCode>NotYetSetNodeValue</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/WernerStaehli.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>1996</StartYear>
+      <EndYear>2000</EndYear>
+      <Password>renrew</Password>
+      <Vorstand>false</Vorstand>
+      <Number>11</Number>
+    </Member>
+    <Member>
+      <Name>Heinz</Name>
+      <FamilyName>Gerber</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>ALIMUNDO@BLUEWIN.CH</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Altfeldweg 51</Street>
+      <City>Niederlenz</City>
+      <PostCode>5702</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>NotYetSetNodeValue</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2010</StartYear>
+      <EndYear>2013</EndYear>
+      <Password>znieh</Password>
+      <Vorstand>false</Vorstand>
+      <Number>12</Number>
+    </Member>
+    <Member>
+      <Name>Peter</Name>
+      <FamilyName>Günthart</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>p.guenthart@gmx.ch</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Altfeldweg 55</Street>
+      <City>Niederlenz</City>
+      <PostCode>5702</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/PeterGuenthart.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>Fotograf</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>1996</StartYear>
+      <EndYear>2016</EndYear>
+      <Password>retep</Password>
+      <Vorstand>false</Vorstand>
+      <Number>13</Number>
+    </Member>
+    <Member>
+      <Name>Marianne</Name>
+      <FamilyName>Sneep</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>msneep@gmx.ch</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Stoffelweg 10</Street>
+      <City>Möriken</City>
+      <PostCode>5103</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/MarianneSneep.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2007</StartYear>
+      <EndYear>2010</EndYear>
+      <Password>ennairam</Password>
+      <Vorstand>false</Vorstand>
+      <Number>14</Number>
+    </Member>
+    <Member>
+      <Name>Max</Name>
+      <FamilyName>Aeschlimann</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>max.aeschli@gmail.com</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Martha Ringier-Strasse 10</Street>
+      <City>Lensburg</City>
+      <PostCode>5600</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/MaxAeschlimann.jpg</PhotoSmallSize>
+      <Tasks>NotYetSetNodeValue</Tasks>
+      <TasksShort>Texte</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2013</StartYear>
+      <EndYear>2016</EndYear>
+      <Password>xam</Password>
+      <Vorstand>false</Vorstand>
+      <Number>15</Number>
+    </Member>
+    <Member>
+      <Name>Hubert</Name>
+      <FamilyName>Keller</FamilyName>
+      <EmailAddress>hubert.keller@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>keller.hubert@bluewin.ch</EmailPrivate>
+      <Telephone>+41 79 409 43 65</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>Winkelstrasse 4</Street>
+      <City>Endingen</City>
+      <PostCode>5304</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/HubertKeller.jpg</PhotoSmallSize>
+      <Tasks>Finanzen
+Betreuung der Supporter und Sponsoren
+</Tasks>
+      <TasksShort>Finanzen</TasksShort>
+      <Why>Pensionierter Redaktor der Aargauer Zeitung, zuletzt für die Stadt Aarau zuständig, Gründer und Bariton-Saxofonist der Big Band Soundtrack 5304, Hobby-Koch und Gourmet.</Why>
+      <StartYear>2017</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>trebuh</Password>
+      <Vorstand>true</Vorstand>
+      <Number>6</Number>
+    </Member>
+    <Member>
+      <Name>Hanni</Name>
+      <FamilyName>Heller</FamilyName>
+      <EmailAddress>hanni.heller@jazzliveaarau.ch</EmailAddress>
+      <EmailPrivate>hejo@bluewin.ch</EmailPrivate>
+      <Telephone>+41 79 368 56 93</Telephone>
+      <TelephoneFix>+41 62 871 48 04</TelephoneFix>
+      <Street>Obere Egg 9</Street>
+      <City>Gipf-Oberfrick</City>
+      <PostCode>5073 </PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>ImagesForApps/Members/HanniHeller.jpg</PhotoSmallSize>
+      <Tasks>Webmaster
+Eintrittskasse
+Platzreservationen
+Gestaltung Plakate und Flyer</Tasks>
+      <TasksShort>Kasse</TasksShort>
+      <Why>Ist noch immer bestrebt, ihr Saxophonspiel zu verbessern, wandert zum Ausgleich, versucht dem Unkraut im Garten Herr zu werden und improvisert auch wenn es drum geht, aus einer Bremsscheibe und einer Gartenhacke eine Skuptur zu schweissen.</Why>
+      <StartYear>2017</StartYear>
+      <EndYear>NotYetSetNodeValue</EndYear>
+      <Password>innah</Password>
+      <Vorstand>true</Vorstand>
+      <Number>7</Number>
+    </Member>
+    <Member>
+      <Name>Apple</Name>
+      <FamilyName>iPhoneAppTester</FamilyName>
+      <EmailAddress>NotYetSetNodeValue</EmailAddress>
+      <EmailPrivate>NotYetSetNodeValue</EmailPrivate>
+      <Telephone>NotYetSetNodeValue</Telephone>
+      <TelephoneFix>NotYetSetNodeValue</TelephoneFix>
+      <Street>NotYetSetNodeValue</Street>
+      <City>NotYetSetNodeValue</City>
+      <PostCode>NotYetSetNodeValue</PostCode>
+      <PhotoMidSize>NotYetSetNodeValue</PhotoMidSize>
+      <PhotoSmallSize>NotYetSetNodeValue</PhotoSmallSize>
+      <Tasks>Test of the iPhone app</Tasks>
+      <TasksShort>NotYetSetNodeValue</TasksShort>
+      <Why>NotYetSetNodeValue</Why>
+      <StartYear>2019</StartYear>
+      <EndYear>2019</EndYear>
+      <Password>jazzlive</Password>
+      <Vorstand>false</Vorstand>
+      <Number>19</Number>
+    </Member>
+  </Members>
+</AppData>

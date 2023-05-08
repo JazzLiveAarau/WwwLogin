@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Administration von JAZZ live AARAU Aufgaben">
-    <meta name="author" content="Hanni Heller">  
+    <meta name="description" content="Test of member login-logout controls">
+    <meta name="author" content="Gunnar Liden">  
     <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="expires" content="0" />
@@ -18,18 +18,18 @@
     <link rel="stylesheet" href="Styles/WebLoginLogout.css">
 
      <!-- Functions for the testing of the login-logout controls -->
-     <script type="text/javascript" src="Scripts/TestLoginLogout.js"></script>
+     <script type="text/javascript" src="Scripts/Main.js"></script>
 
+     <!-- Functions for application XML -->
+     <script type="text/javascript" src="Scripts/JazzApplicationXml.js"></script>
 
      <!-- Functions for the creation and handling of member login-logout -->
     <script type="text/javascript" src="Scripts/WebLoginLogout.js"></script>
 
-
-
     <title>Test Vorstand-Login-Logout</title>
 </head>
 
-<body onload= "initTestLoginLogout()">
+<body onload= "initTestLogin()">
     
     <div id= 'id_test_page' class= 'cl_test_page'>
 
@@ -41,6 +41,11 @@
 
         <!-- Place holder for the member login logout controls -->
         <div id= "id_div_login_logout" ></div>
+
+
+        <div id="id_test_control_one">Control One (displayed after login)</div>
+
+        <div id="id_test_control_two">Control Two (displayed after login)</div>
     </div>
 
 </body>
