@@ -29,9 +29,12 @@ class WebLoginLogout
         // Call back function name used after creation of application XML object
         this.m_callback_function_xml = createLoginLogoutControlsAfterLoadOfXml;
 
+        // Call back function login if possible
+        this.m_callback_function_login_if_possible = callbackWebLoginIfPossible;
+
         // Event function name for the function that shall be called when the 
         // user clicks button Login/Logout
-        this.m_event_function_click = 'onClickWebLoginLogoutButton';
+        this.m_event_function_click_str = 'onClickWebLoginLogoutButton';
 
         // Instance of class LoginLogout
         this.m_login_logout = null;
@@ -123,12 +126,12 @@ class WebLoginLogout
         }
     
         this.m_login_logout = new LoginLogout(this.getIdLoginLogoutTextBox(), this.getIdLoginLogoutButton(), 
-                                    this.m_id_div_login_logout, this.m_event_function_click,
+                                    this.m_id_div_login_logout, this.m_event_function_click_str,
                                           user_name);
     
         if (user_name != LoginLogout.UserNameIsUndefined())
         {
-            this.getLoginLogoutObject().loginIfPossible(callbackLoginIfPossible);
+            this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
         }
  
     } // loadXml
@@ -138,7 +141,7 @@ class WebLoginLogout
     ///////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////////////////////////////////////////////////////
-    ///////////////////////// Start Event Functions ///////////////////////////
+    ///////////////////////// Start Event And Callback Functions //////////////
     ///////////////////////////////////////////////////////////////////////////  
     
     // User clicked the login-logout button. 
@@ -158,8 +161,6 @@ class WebLoginLogout
     {
         var user_name = this.getUserNameObject().getUserName();
 
-        debugJazzTasks('onClickWebLoginLogoutButton user_name= ' + user_name);
-
         if (user_name == JazzUserName.getUserNameNotYetSet())
         {
             var request_name =  this.getUserNameObject().requestSetUserName();
@@ -168,7 +169,7 @@ class WebLoginLogout
             {
                 this.getLoginLogoutObject().setUserName(request_name);
     
-                this.getLoginLogoutObject().loginIfPossible(callbackLoginIfPossible);
+                this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
             }
         }
         else
@@ -192,88 +193,20 @@ class WebLoginLogout
 
     } // callbackOnClickWebLoginLogoutButton
 
+    // Callback function for LoginLogout.loginIfPossible
+    callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
+    {
+        setUserHasLoggedIn(i_b_user_has_logged_in);
+
+        getLoginLogoutObject().createSetControls(i_logged_in_name);
+
+    } // callbackWebLoginIfPossible
+
     ///////////////////////////////////////////////////////////////////////////
-    ///////////////////////// End Event Functions /////////////////////////////
+    ///////////////////////// End Event And Callback Functions ////////////////
     ///////////////////////////////////////////////////////////////////////////
 
 } // WebLoginLogout
 
 
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// Start Callback Functions ////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-
-// Callback function for LoginLogout.loginIfPossible
-function callbackLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
-{
-    //alert("callbackLoginIfPossible Error: Should only be called for Admin Tasks")
-    g_web_login_logout.setUserHasLoggedIn(i_b_user_has_logged_in);
-
-    g_web_login_logout.getLoginLogoutObject().createSetControls(i_logged_in_name);
-
-} // callbackLoginIfPossible
-
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// End Callback Functions //////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// Start Utility Functions /////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-
-    // Returns the label string. Sample string:
-    // <label for="id_text_box" title= "Tooltip for the control ..." >Label text</label>
-    function getHtmlElementLabelString(i_label_str, i_id_control, i_title)
-    {
-        var ret_label_str = '';
-
-        if (i_label_str == 0)
-        {
-            alert("getHtmlElementLabelString Input label string is not set");
-
-            return ret_label_str;
-        }
-
-        if (i_id_control == 0)
-        {
-            alert("getHtmlElementLabelString Input control identity string must be set");
-
-            return ret_label_str;
-        }
-
-        ret_label_str = ret_label_str + '<label for= "' + i_id_control + '" ';
-
-        if (i_title.length > 0)
-        {
-            ret_label_str = ret_label_str + ' title="' + i_title + '" ';
-        }
-
-        ret_label_str = ret_label_str + '>';
-
-        ret_label_str = ret_label_str + i_label_str;
-
-        ret_label_str = ret_label_str + '</label>';
-
-        return ret_label_str;
-
-    } // getHtmlElementLabelString
-    
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// End Utility Functions ///////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// Start Debug Function ////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-
-// Displays the input string in the debugger Console
-function debugJazzTasks(i_msg_str)
-{
-    console.log('JazzTasks:' + i_msg_str);
-
-} // debugJazzTasks
-
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// End Debug Function //////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
 
