@@ -110,3 +110,30 @@ function getIdDivElementTestControlTwo()
 ///////////////////////// End Get Id And Element Functions ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
+// User clicked merge files
+function eventMergeFiles()
+{
+    var file_name = '../../JazzScripts/LoginLogout_20230509.js';
+
+    $.post
+      ('PhpMerge/MergeLoginLogout.php',
+        {
+          file_name: file_name
+        },
+        function(data_save,status_save)
+		{
+            if (status_save == "success")
+            {
+                // alert(data_save);
+            }
+            else
+            {
+				alert("Execution of MergeLoginLogout.php failed");
+            }          
+        } // function
+
+      ); // post
+	  
+
+} // eventMergeFiles
+

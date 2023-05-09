@@ -37,4 +37,18 @@ Defines styles for the test application of the member login-logout menu
     margin-right: 15px;
 }
 
+.cl_div_merge_files
+{
+    border: solid 2px red;
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 40px;    
+}
+
 

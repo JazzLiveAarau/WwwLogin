@@ -14,9 +14,6 @@
     <!-- Styles for the test application of the member login-logout controls -->
     <link rel="stylesheet" href="Styles/TestLoginLogout.css">
 
-    <!-- Styles for the member login-logout controls -->
-    <link rel="stylesheet" href="Styles/WebLoginLogout.css">
-
      <!-- Functions for the testing of the login-logout controls -->
      <script type="text/javascript" src="Scripts/Main.js"></script>
 
@@ -30,13 +27,15 @@
      <script type="text/javascript" src="Scripts/JazzUserName.js"></script>
 
      <!-- Class JazzTextBox -->
-     <script type="text/javascript" src="Scripts/JazzTextBox.js"></script>
+     <script type="text/javascript" src="https://jazzliveaarau.ch/JazzScripts/JazzTextBox.js"></script>
 
      <!-- Class JazzButton -->
-     <script type="text/javascript" src="Scripts/JazzButton.js"></script>
+     <script type="text/javascript" src="https://jazzliveaarau.ch/JazzScripts/JazzButton.js"></script>
 
      <!-- Functions for the creation and handling of member login-logout -->
     <script type="text/javascript" src="Scripts/WebLoginLogout.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Test Vorstand-Login-Logout</title>
 </head>
@@ -59,6 +58,8 @@
 
         <div id="id_test_control_two">Control Two (displayed after login)</div>
     </div>
+
+    <div id="id_div_merge_files"   class="cl_div_merge_files" onclick="eventMergeFiles()" >Merge files</div>
 
 </body>
 
