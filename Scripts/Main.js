@@ -65,9 +65,7 @@ function callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logg
 // Callback function for LoginLogout.loginIfPossible
 function callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
 {
-    g_web_login_logout.setUserHasLoggedIn(i_b_user_has_logged_in);
-
-    g_web_login_logout.getLoginLogoutObject().createSetControls(i_logged_in_name);
+    g_web_login_logout.callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in);
 
 } // callbackWebLoginIfPossible
 
