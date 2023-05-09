@@ -1,5 +1,5 @@
 // File: LoginLogout.js
-// Date: 2023-05-08
+// Date: 2023-05-09
 // Author: Gunnar Lidén
 
 
@@ -804,7 +804,9 @@ class LoginLogout
     // Returns the name of the file that holds the name of the logged in person
     static getLoginLogoutFileName()
     {
-        return "Data/LoginLogout.txt";
+        //20230509 return "Data/LoginLogout.txt";
+        // The relative path is not OK if JazzScripts file is used
+        return "../../Tasks/Php/Data/LoginLogout.txt";
 
     } // getLoginLogoutFileName
 

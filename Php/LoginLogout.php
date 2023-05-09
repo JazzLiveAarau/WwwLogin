@@ -1,7 +1,7 @@
 <?php
 
 // File: LoginLogout.php
-// Date: 2021-06-03
+// Date: 2023-05-09
 // Author: Gunnar Liden
 
 // This file defines all PHP functions for JavaScript class LoginLogout
@@ -25,7 +25,9 @@ $error_message_one = $_POST['error_message_one'];
 
 $error_message_two = $_POST['error_message_two'];
 
-$file_tasks_xml = "../Xml/JazzTasks.xml";
+//$file_tasks_xml = "../Xml/JazzTasks.xml";
+// The relative path is not OK if JazzScripts file is used
+$file_tasks_xml = "../../Tasks/Xml/JazzTasks.xml";
 
 $logout_limit_time_diff_minutes  = 15;
 
