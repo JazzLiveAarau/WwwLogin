@@ -40,7 +40,7 @@ $file_name = $_POST['file_name'];
 $file_content = file_get_contents('../Scripts/JazzUserName.js');
 $file_content .= "\n" . file_get_contents('../Scripts/WebLoginLogout.js');
 $file_content .= "\n" . file_get_contents('../Scripts/LoginLogout.js');
-$file_content .= "\n" . file_get_contents('../Php/LoginLogout.php');
+//QQQ Does not make sense $file_content .= "\n" . file_get_contents('../Php/LoginLogout.php');
 
 $fp = fopen($file_name, 'w');
 if(!$fp)

@@ -34,33 +34,35 @@ function initTestLogin()
     hide_display_elements[0] = getDivElementTestControlOne();
     hide_display_elements[1] = getDivElementTestControlTwo();
 
+    // Only read data for all applications except Admin Tasks
+    var b_only_read_data = true;
+
     g_web_login_logout = new WebLoginLogout(getIdDivLoginLogout(), 
-                          hide_display_elements);
+                          hide_display_elements, b_only_read_data);
 
     g_web_login_logout.loadXml();
 
 } // initTestLoginLogout
 
 // Callback function after the creation of the application XML object
-function createLoginLogoutControlsAfterLoadOfXml()
+function createLoginControlsAfterXml()
 {
-    g_web_login_logout.createLoginLogoutControlsAfterLoadOfXml();
+    g_web_login_logout.createLoginControlsAfterXml();
    
-
 } // initTestAfterObjectCreation
 
 // Event function user clicked the login-logout button
-function onClickWebLoginLogoutButton()
+function onClickWebLoginButton()
 {
-    g_web_login_logout.onClickWebLoginLogoutButton();
+    g_web_login_logout.onClickWebLoginButton();
 
-} // onClickWebLoginLogoutButton
+} // onClickWebLoginButton
 
-function callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
+function callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
 {
-    g_web_login_logout.callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg);
+    g_web_login_logout.callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg);
     
-} // callbackOnClickWebLoginLogoutButton
+} // callbackonClickWebLoginButton
 
 // Callback function for LoginLogout.loginIfPossible
 function callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)

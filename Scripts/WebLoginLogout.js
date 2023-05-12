@@ -1,5 +1,5 @@
 // File: WebLoginLogout.js
-// Date: 2023-05-08
+// Date: 2023-05-09
 // Author: Gunnar Lidén
 
 // File content
@@ -12,13 +12,14 @@ class WebLoginLogout
     // Creates the instance of the class
     // id_div_login_logout:      Identity of the div placeholder for the menu
     // i_hide_display_elements:  Elements that shall be hidden if user not is logged in
+    // i_b_only_read_data:       Flag telling if data only will be read (not changed or added)
     // Four (global) functions with following names must be defined. These functions
     // shall call a corresponding member function with the same name:
-    // - createLoginLogoutControlsAfterLoadOfXml
-    // - onClickWebLoginLogoutButton
-    // - callbackOnClickWebLoginLogoutButton
+    // - createLoginControlsAfterXml
+    // - onClickWebLoginButton
+    // - callbackonClickWebLoginButton
     // - callbackWebLoginIfPossible
-    constructor(i_id_div_login_logout, i_hide_display_elements) 
+    constructor(i_id_div_login_logout, i_hide_display_elements, i_b_only_read_data) 
     {
         // Member variables
         // ================
@@ -32,18 +33,21 @@ class WebLoginLogout
         // Array of elements that shall be hidden or displayed depending on if user not is logged in
         this.m_hide_display_elements = i_hide_display_elements;
 
+        // Flag telling if data only will be read (not changed or added)
+        this.m_b_only_read_data = i_b_only_read_data;
+
         // Call back function name used after creation of application XML object
-        this.m_callback_function_xml = createLoginLogoutControlsAfterLoadOfXml;
+        this.m_callback_function_xml = createLoginControlsAfterXml;
 
         // Call back function login if possible
         this.m_callback_function_login_if_possible = callbackWebLoginIfPossible;
 
         // Event function name for the function that shall be called when the 
         // user clicks button Login/Logout
-        this.m_event_function_click_str = 'onClickWebLoginLogoutButton';
+        this.m_event_function_click_str = 'onClickWebLoginButton';
 
         // Call back function on klick login-logout button
-        this.m_callback_function_on_click = callbackOnClickWebLoginLogoutButton;
+        this.m_callback_function_on_click = callbackonClickWebLoginButton;
 
         // Instance of class LoginLogout
         this.m_login_logout = null;
@@ -114,6 +118,7 @@ class WebLoginLogout
     ///////////////////////// Start Create Controls ///////////////////////////
     ///////////////////////////////////////////////////////////////////////////  
 
+    // Checks first that compulsory functions are defined. Call of functionsAreDefined
     // Creates the application XML object and calls afterward the function that
     // creates the controls. First is the normal (global) function called and 
     // thereafter the member function
@@ -132,32 +137,32 @@ class WebLoginLogout
     {
         var ret_b_exist = true;
 
-        //var type_of_str = typeof createLoginLogoutControlsAfterLoadOfXml;
+        //var type_of_str = typeof createLoginControlsAfterXml;
 
-        if ((typeof createLoginLogoutControlsAfterLoadOfXml != 'function')) 
+        if ((typeof createLoginControlsAfterXml != 'function')) 
         {
-            alert("WebLoginLogout.functionsAreDefined Function createLoginLogoutControlsAfterLoadOfXml is not defined");
+            alert("WebLoginLogout.functionsAreDefined Function createLoginControlsAfterXml is not defined");
 
             ret_b_exist = false;
         }
 
-        if ((typeof onClickWebLoginLogoutButton != 'function')) 
+        if ((typeof onClickWebLoginButton != 'function')) 
         {
-            alert("WebLoginLogout.functionsAreDefined Function onClickWebLoginLogoutButton is not defined");
+            alert("WebLoginLogout.functionsAreDefined Function onClickWebLoginButton is not defined");
 
             ret_b_exist = false;
         }
 
-        if ((typeof callbackOnClickWebLoginLogoutButton != 'function')) 
+        if ((typeof callbackonClickWebLoginButton != 'function')) 
         {
-            alert("WebLoginLogout.functionsAreDefined Function callbackOnClickWebLoginLogoutButton is not defined");
+            alert("WebLoginLogout.functionsAreDefined Function callbackonClickWebLoginButton is not defined");
 
             ret_b_exist = false;
         }
 
         if ((typeof callbackWebLoginIfPossible != 'function')) 
         {
-            alert("WebLoginLogout.functionsAreDefined Function callbackOnClickWebLoginLogoutButton is not defined");
+            alert("WebLoginLogout.functionsAreDefined Function callbackonClickWebLoginButton is not defined");
 
             ret_b_exist = false;
         }
@@ -167,7 +172,7 @@ class WebLoginLogout
     } // functionsAreDefined
 
     // Creates the member login-logout controls when the application XML object has been created
-    createLoginLogoutControlsAfterLoadOfXml()
+    createLoginControlsAfterXml()
     {
         this.m_user_name_object = new JazzUserName(this.m_application_xml);
 
@@ -182,9 +187,15 @@ class WebLoginLogout
                                     this.m_id_div_login_logout, this.m_event_function_click_str,
                                           user_name);
     
-        if (user_name != LoginLogout.UserNameIsUndefined())
+        if (user_name != LoginLogout.UserNameIsUndefined() && !this.m_b_only_read_data)
         {
             this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
+        }
+        if (user_name != LoginLogout.UserNameIsUndefined() && this.m_b_only_read_data)
+        {
+            // this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
+
+            this.m_callback_function_login_if_possible(user_name, true);
         }
  
     } // loadXml
@@ -210,7 +221,7 @@ class WebLoginLogout
     // 2.c Login if possible. Call of LoginLogout.loginIfPossible
     // 3. Case: User name is saved
     // 3.a Call member function LoginLogout.clickLoginLogoutButton
-    onClickWebLoginLogoutButton()
+    onClickWebLoginButton()
     {
         var user_name = this.getUserNameObject().getUserName();
 
@@ -221,19 +232,31 @@ class WebLoginLogout
             if (request_name != JazzUserName.getUserNameNotYetSet())
             {
                 this.getLoginLogoutObject().setUserName(request_name);
-    
-                this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
+
+                if (!this.m_b_only_read_data)
+                {
+                    this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
+                }
+                else
+                {
+                    this.m_callback_function_login_if_possible(request_name, true);
+                }
+                
             }
         }
-        else
+        else if (!this.m_b_only_read_data)
         {
             this.getLoginLogoutObject().clickLoginLogoutButton(this.m_callback_function_on_click);
         }
+        else
+        {
+            this.m_callback_function_on_click(LoginLogout.UserNameIsUndefined(), false, "")
+        }
 
-    } // onClickWebLoginLogoutButton
+    } // onClickWebLoginButton
 
     // Callback function for clicking the login-logout button (LoginLogout.clickLoginLogoutButton)
-    callbackOnClickWebLoginLogoutButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
+    callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
     {
         if (i_warning_msg.length > 0)
         {
@@ -244,7 +267,7 @@ class WebLoginLogout
     
         this.getLoginLogoutObject().createSetControls(i_logged_in_name);
 
-    } // callbackOnClickWebLoginLogoutButton
+    } // callbackonClickWebLoginButton
 
     // Callback function for LoginLogout.loginIfPossible
     callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
@@ -253,11 +276,28 @@ class WebLoginLogout
 
         this.getLoginLogoutObject().createSetControls(i_logged_in_name);
 
+        this.hideDisplayElements(i_b_user_has_logged_in);
+
     } // callbackWebLoginIfPossible
 
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////// End Event And Callback Functions ////////////////
     ///////////////////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Start Hide Display Application Elements /////////
+    ///////////////////////////////////////////////////////////////////////////  
+
+    // Hide or display elements defined in array m_hide_display_elements
+    hideDisplayElements(i_b_user_has_logged_in)
+    {
+        // TODO
+
+    } // hideDisplayElements
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////// End Hide Display Application Elements ///////////
+    ///////////////////////////////////////////////////////////////////////////  
 
 } // WebLoginLogout
 

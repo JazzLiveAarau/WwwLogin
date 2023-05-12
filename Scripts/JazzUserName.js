@@ -1,5 +1,5 @@
 // File: JazzUserName.js
-// Date: 2023-05-08
+// Date: 2023-05-11
 // Author: Gunnar Lidén
 
 // File content
@@ -49,8 +49,7 @@ class JazzUserName
     // 2. If the user name not yet was saved in the computer, return JazzUserName.getUserNameNotYetSet
     // 3. If the user name is saved in the computer
     // 3.1 Set m_user_name with this name
-    // 3.2 Return m_user_name
-    // 4. 
+    // 3.2 Return m_user_name 
     getUserName()
     {
         if (this.m_user_name.length > 0)
