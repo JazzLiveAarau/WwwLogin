@@ -1,5 +1,5 @@
 // File: LoginLogout.js
-// Date: 2023-05-11
+// Date: 2023-05-13
 // Author: Gunnar Lidén
 
 
@@ -139,6 +139,9 @@ class LoginLogout
 
      ///////////////////////// End Init ////////////////////////////////////////////////////  
 
+        // Flag telling if debug data shall be written to log
+        this.m_write_debug_to_log = true;
+
     } // constructor
 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -152,7 +155,11 @@ class LoginLogout
     // Login if possible. The callback functions returns the name of the logged in person
 	loginIfPossible(i_callback_login_if_possible)
     {
+        debugToConsole("loginIfPossible Enter");
+
         var user_name = this.getUserName();
+
+        debugToConsole("loginIfPossible user_name= " + user_name);
 
         if (user_name == LoginLogout.UserNameIsUndefined())
         {
@@ -178,6 +185,8 @@ class LoginLogout
 
             return;
         }
+
+        debugToConsole("loginIfPossible Call of Php/LoginLogout.php. Case= " + LoginLogout.execPhpCaseLoginIfPossible());
 
         $.post
         ('Php/LoginLogout.php',
@@ -205,6 +214,8 @@ class LoginLogout
                 var logged_in_name = LoginLogout.extractLoggedInName(reply_str);
 
                 var flag_logged_in = LoginLogout.extractUserLoggedInFlag(reply_str);
+
+                debugToConsole("loginIfPossible logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
 
                 i_callback_login_if_possible(logged_in_name, flag_logged_in);
             }
@@ -235,9 +246,11 @@ class LoginLogout
     // Click Login Logout. The callback functions returns the name of the logged in person
 	clickLoginLogoutButton(i_callback_click_login_logout)
     {
+        debugToConsole("clickLoginLogoutButton Enter");
 
         var user_name = this.getUserName();
 
+        debugToConsole("clickLoginLogoutButton user_name= " + user_name);
 
         if (user_name == LoginLogout.UserNameIsUndefined())
         {
@@ -263,6 +276,8 @@ class LoginLogout
 
             return;
         }
+
+        debugToConsole("clickLoginLogoutButton Call of Php/LoginLogout.php Case= " + LoginLogout.execPhpCaseClickLoginLogoutButton());
 
         $.post
         ('Php/LoginLogout.php',
@@ -293,6 +308,8 @@ class LoginLogout
 
                 var warning_msg = LoginLogout.getWarningMessage(reply_str);
 
+                debugToConsole("clickLoginLogoutButton logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in + " warning_msg= " + warning_msg);
+
                 i_callback_click_login_logout(logged_in_name, flag_logged_in, warning_msg);
             }
             else
@@ -321,6 +338,8 @@ class LoginLogout
     // Get the logged in name
 	getLoggedInName(i_callback_get_logged_in_name)
     {
+        debugToConsole("getLoggedInName Enter");
+
         var user_name = this.getUserName();
 
         if (user_name == LoginLogout.UserNameIsUndefined())
@@ -345,6 +364,8 @@ class LoginLogout
 
             return;
         }
+
+        debugToConsole("getLoggedInName Call of Php/LoginLogout.php. Case= " + LoginLogout.execPhpCaseGetLoggedInName());
 
         $.post
         ('Php/LoginLogout.php',
@@ -372,6 +393,8 @@ class LoginLogout
                 var logged_in_name = LoginLogout.extractLoggedInName(reply_str);
 
                 var flag_logged_in = LoginLogout.extractUserLoggedInFlag(reply_str);
+
+                debugToConsole("getLoggedInName logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
 
                 i_callback_get_logged_in_name(logged_in_name, flag_logged_in);
 
@@ -416,6 +439,8 @@ class LoginLogout
             return;
         }
 
+        debugToConsole("setLoggedInName Call of Php/LoginLogout.php. Case= " + LoginLogout.execPhpCaseSetLoggedInName());
+
         $.post
         ('Php/LoginLogout.php',
         {
@@ -440,6 +465,8 @@ class LoginLogout
             if (status_str == "success")
             {
                 var reply_trim_str = LoginLogout.removePhpEchoNewRowAndSpaces(reply_str);
+
+                debugToConsole("setLoggedInName reply_trim_str= " + reply_trim_str);
 
                 i_callback_set_logged_in_name(reply_trim_str);
             }
@@ -580,6 +607,7 @@ class LoginLogout
     // The way that append is implemented makes it necessary to empty the container before recreation
     createSetControls(i_login_name)
     {
+        debugToConsole("createSetControls Enter");
 
         if (!this.createSetControlsInputCheck(i_login_name))
         {
@@ -607,7 +635,7 @@ class LoginLogout
     
             this.m_text_box.setTitle(this.m_tooltip_button_user_name); 
 
-            LoginLogout.debugToConsole('createSetControls i_login_name= ' + LoginLogout.UserNameIsUndefined() + ' (1)');
+            this.debugToConsole('createSetControls i_login_name= ' + LoginLogout.UserNameIsUndefined() + ' (1)');
         }              
         else if (i_login_name == this.getUserName())
         {
@@ -644,7 +672,7 @@ class LoginLogout
     
             this.m_login_logout_button.setTitle(this.m_tooltip_button_user_name); 
 
-            LoginLogout.debugToConsole('createSetControls i_login_name= ' + LoginLogout.UserNameIsUndefined() + ' (2)');
+            this.debugToConsole('createSetControls i_login_name= ' + LoginLogout.UserNameIsUndefined() + ' (2)');
         }      
         else if (i_login_name == this.getUserName())
         {
@@ -667,6 +695,8 @@ class LoginLogout
 
         this.setElementStyles(i_login_name);
 
+        debugToConsole("createSetControls Exit");
+
     } // createSetControls
 
     // Checks the input data for createSetControls
@@ -683,6 +713,8 @@ class LoginLogout
     // Set element styles
     setElementStyles(i_login_name)
     {
+        debugToConsole("setElementStyles Enter");
+
         this.setElementColors(i_login_name);
 
         var div_container_el = this.getDivContainerElement();
@@ -707,11 +739,15 @@ class LoginLogout
 
         input_el.style.textAlign = "center";
 
+        debugToConsole("setElementStyles Exit");
+
     } // setElementStyles
 
     // Set element colors
     setElementColors(i_login_name)
     {
+        debugToConsole("setElementColors Enter");
+
         this.setColorButton(i_login_name);
 
         var div_container_el = this.getDivContainerElement();
@@ -729,6 +765,8 @@ class LoginLogout
         input_el.style.backgroundColor = this.m_input_color;
 
         button_el.style.cursor = "pointer";
+
+        debugToConsole("setElementColors Exit");
 
     } // setElementColors
 
@@ -1064,8 +1102,13 @@ class LoginLogout
     } // getDebugExecMsg
 
     // Writes debug to the console
-    static debugToConsole(i_msg_str)
+    debugToConsole(i_msg_str)
     {
+        if (!this.m_write_debug_to_log)
+        {
+             return;
+        }
+
         console.log('LoginLogout:' + i_msg_str);
 
     } // debugToConsole    
@@ -1081,6 +1124,8 @@ class LoginLogout
     // Simulate a logged in name
     static simulateGetLoggedInName()
     {
+        debugToConsole("simulateGetLoggedInName Enter");
+
         var ret_logged_in_name = "";
 
         var user_login_name = g_web_login_logout.getUserNameObject().getUserName();
@@ -1116,6 +1161,8 @@ class LoginLogout
             ret_logged_in_name = vorstands_array[index_vorstand];
         }
 
+        debugToConsole("simulateGetLoggedInName Exit ret_logged_in_name= " + ret_logged_in_name);
+
         return ret_logged_in_name;
 
     } // simulateGetLoggedInName
@@ -1124,6 +1171,8 @@ class LoginLogout
     // user starts the application. For the tests this corresponds to reload application
     simulateLoginIfPossible(i_callback_login_if_possible)
     {
+        debugToConsole("simulateLoginIfPossible Enter");
+
         var user_name = this.getUserName();
 
         var in_file_logged_in_name = this.m_logged_in_simulation;
@@ -1150,10 +1199,14 @@ class LoginLogout
 
         if (logged_in_name == user_name)
         {
+            debugToConsole("simulateLoginIfPossible Callback user_name= " + user_name + " is logged in");
+
             i_callback_login_if_possible(user_name, true);
         }
         else
         {
+            debugToConsole("simulateLoginIfPossible Callback user_name= " + user_name + " is not logged in");
+
             i_callback_login_if_possible(logged_in_name, false);
         }
 
@@ -1162,6 +1215,8 @@ class LoginLogout
     // Simulates a click on the login/logout button
     simulateClickLoginLogoutButton(i_callback_click_login_logout)
     {
+        debugToConsole("simulateClickLoginLogoutButton Enter");
+
         var user_name = this.getUserName();
 
         var logged_in_name = this.simulateChangeOfLogggedInName();
@@ -1175,6 +1230,8 @@ class LoginLogout
 
             this.m_logged_in_simulation = LoginLogout.loginNameNobody();
 
+            debugToConsole("simulateClickLoginLogoutButton Callback user_name= " + LoginLogout.loginNameNobody() + " is not logged in. No warning");
+
             i_callback_click_login_logout(LoginLogout.loginNameNobody(), false, "");
         }
         else if (user_is_logged_in && logged_in_name != user_name)
@@ -1183,6 +1240,8 @@ class LoginLogout
             // a warning and the name of the logged in person will be displayed
 
             this.m_logged_in_simulation = logged_in_name;
+
+            debugToConsole("simulateClickLoginLogoutButton Callback user_name= " + logged_in_name + " is not logged in. Warning= " + LoginLogout.otherForcedLoginMessage());
 
             i_callback_click_login_logout(logged_in_name, false, LoginLogout.otherForcedLoginMessage());
         }
@@ -1194,6 +1253,8 @@ class LoginLogout
 
             this.m_logged_in_simulation = user_name;
 
+            debugToConsole("simulateClickLoginLogoutButton Callback user_name= " + user_name + " is logged in. No warning");
+
             i_callback_click_login_logout(user_name, true, "");
         }
         else if (!user_is_logged_in && logged_in_name != user_name)
@@ -1202,6 +1263,8 @@ class LoginLogout
             // The user gets a message that he logged out the other person
 
             this.m_logged_in_simulation = user_name;
+
+            debugToConsole("simulateClickLoginLogoutButton Callback user_name= " + user_name + " is logged in. Warning= " + LoginLogout.otherForcedLoginMessage());
 
             i_callback_click_login_logout(user_name, true, LoginLogout.userForcedLoginLoggedOutMessage());
         }
@@ -1212,6 +1275,8 @@ class LoginLogout
             // The user gets informed about this and the user can login
 
             this.m_logged_in_simulation = user_name;
+
+            debugToConsole("simulateClickLoginLogoutButton Callback user_name= " + user_name + " is logged in. Warning= " + LoginLogout.otherForcedLoginLoggedOutMessage());
 
             i_callback_click_login_logout(user_name, true, LoginLogout.otherForcedLoginLoggedOutMessage());
         }
@@ -1226,6 +1291,8 @@ class LoginLogout
     // Returns login name: Simulates a change
     simulateChangeOfLogggedInName()
     {
+        debugToConsole("simulateChangeOfLogggedInName Enter");
+
         var ret_logged_in_name = "";
 
         var user_name = this.getUserName();
@@ -1272,6 +1339,7 @@ class LoginLogout
             }
         }
 
+        debugToConsole("simulateChangeOfLogggedInName Exit ret_logged_in_name= " + ret_logged_in_name);
 
         return ret_logged_in_name;
 

@@ -1,5 +1,5 @@
 // File: WebLoginLogout.js
-// Date: 2023-05-09
+// Date: 2023-05-13
 // Author: Gunnar Lidén
 
 // File content
@@ -60,6 +60,9 @@ class WebLoginLogout
 
         // The member login-logout menu object
         this.m_object_xml = null;
+
+        // Flag telling if debug data shall be written to log
+        this.m_write_debug_to_log = true;
 
     } // constructor
 
@@ -124,13 +127,18 @@ class WebLoginLogout
     // thereafter the member function
     loadXml()
     {
+        this.debugToConsole("loadXml Enter");
+
         if (!this.functionsAreDefined())
         {
             return;
         }
 
         this.m_application_xml = new JazzApplicationXml(this.m_callback_function_xml);
-    }
+
+        this.debugToConsole("loadXml Object JazzApplicationXml created");
+
+    } // loadXml
 
     // Returns true if functions are defined
     functionsAreDefined()
@@ -167,6 +175,16 @@ class WebLoginLogout
             ret_b_exist = false;
         }
 
+        if (ret_b_exist)
+        {
+            this.debugToConsole("functionsAreDefined: Web Login-Logout functions are defined");
+        }
+        else
+        {
+            this.debugToConsole("functionsAreDefined: Web Login-Logout functions are NOT defined");
+        }
+        
+
         return ret_b_exist;
 
     } // functionsAreDefined
@@ -174,6 +192,8 @@ class WebLoginLogout
     // Creates the member login-logout controls when the application XML object has been created
     createLoginControlsAfterXml()
     {
+        this.debugToConsole("createLoginControlsAfterXml Enter");
+
         this.m_user_name_object = new JazzUserName(this.m_application_xml);
 
         var user_name = this.m_user_name_object.getUserName();
@@ -182,23 +202,51 @@ class WebLoginLogout
         {
             user_name = LoginLogout.UserNameIsUndefined();
         }
+
+        this.debugToConsole("createLoginControlsAfterXml user_name= " + user_name);
     
         this.m_login_logout = new LoginLogout(this.getIdLoginLogoutTextBox(), this.getIdLoginLogoutButton(), 
                                     this.m_id_div_login_logout, this.m_event_function_click_str,
                                           user_name);
+
+        this.debugToConsole("createLoginControlsAfterXml Object LoginLogout is created");
     
-        if (user_name != LoginLogout.UserNameIsUndefined() && !this.m_b_only_read_data)
+        if (this.userNameIsDefined(user_name) && !this.readOnlyDataApplication())
         {
+            this.debugToConsole("createLoginControlsAfterXml Case: User name defined. A (true) login application");
+
             this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
         }
-        if (user_name != LoginLogout.UserNameIsUndefined() && this.m_b_only_read_data)
+        if (this.userNameIsDefined(user_name)  && this.readOnlyDataApplication())
         {
-            // this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
+            this.debugToConsole("createLoginControlsAfterXml Case: User name defined. No checks if any other is logged in");
 
             this.m_callback_function_login_if_possible(user_name, true);
         }
+
+        this.debugToConsole("createLoginControlsAfterXml Exit");
  
-    } // loadXml
+    } // createLoginControlsAfterXml
+
+    // Returns true if user name is defined
+    userNameIsDefined(i_user_name)
+    {
+        if (i_user_name != LoginLogout.UserNameIsUndefined())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    } // userNameIsDefined
+
+    // Returns true if it is a read only application
+    readOnlyDataApplication()
+    {
+        return this.m_b_only_read_data;
+
+    } // readOnlyDataApplication
 
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////// End Create Controls /////////////////////////////
@@ -223,41 +271,87 @@ class WebLoginLogout
     // 3.a Call member function LoginLogout.clickLoginLogoutButton
     onClickWebLoginButton()
     {
+        this.debugToConsole("onClickWebLoginButton Enter");
+
         var user_name = this.getUserNameObject().getUserName();
+
+        this.debugToConsole("onClickWebLoginButton user_name= " + user_name);
 
         if (user_name == JazzUserName.getUserNameNotYetSet())
         {
+            this.debugToConsole("onClickWebLoginButton Case: User name is not yet set");
+
             var request_name =  this.getUserNameObject().requestSetUserName();
+
+            this.debugToConsole("onClickWebLoginButton request_name= " + request_name);
     
             if (request_name != JazzUserName.getUserNameNotYetSet())
             {
+                this.debugToConsole("onClickWebLoginButton Case: Request name has not yet been set");
+
                 this.getLoginLogoutObject().setUserName(request_name);
 
-                if (!this.m_b_only_read_data)
+                if (!this.readOnlyDataApplication())
                 {
+                    this.debugToConsole("onClickWebLoginButton Case: A (true) login application");
+
                     this.getLoginLogoutObject().loginIfPossible(this.m_callback_function_login_if_possible);
                 }
                 else
                 {
+                    this.debugToConsole("onClickWebLoginButton Case: No checks if any other is logged in");
+
                     this.m_callback_function_login_if_possible(request_name, true);
                 }
                 
             }
         }
-        else if (!this.m_b_only_read_data)
+        else if (!this.readOnlyDataApplication())
         {
+            this.debugToConsole("onClickWebLoginButton Case: A (true) login application");
+
+            this.debugToConsole("onClickWebLoginButton Call of function LoginLogout.clickLoginLogoutButton");
+
             this.getLoginLogoutObject().clickLoginLogoutButton(this.m_callback_function_on_click);
         }
         else
         {
-            this.m_callback_function_on_click(LoginLogout.UserNameIsUndefined(), false, "")
+            this.debugToConsole("onClickWebLoginButton Case: No checks if any other is logged in");
+
+            this.debugToConsole("onClickWebLoginButton Call of function callbackonClickWebLoginButton");
+
+            if (!this.getLoginLogoutObject().userIsLoggedIn())
+            {
+                this.debugToConsole("onClickWebLoginButton Parameter 1= " + user_name + " (user name)");
+
+                this.debugToConsole("onClickWebLoginButton Parameter 2= " + "true"+ " (user is logged in)");
+    
+                this.debugToConsole("onClickWebLoginButton Parameter 3= " + "empty"+ " (warning message)");
+    
+                this.m_callback_function_on_click(user_name, true, "")
+            }
+            else
+            {
+                this.debugToConsole("onClickWebLoginButton Parameter 1= " + LoginLogout.UserNameIsUndefined() + " (user name");
+
+                this.debugToConsole("onClickWebLoginButton Parameter 2= " + "false"+ " (user is logged in)");
+    
+                this.debugToConsole("onClickWebLoginButton Parameter 3= " + "empty"+ " (warning message)");
+    
+                this.m_callback_function_on_click(LoginLogout.UserNameIsUndefined(), false, "")
+            }
+
         }
+
+        this.debugToConsole("onClickWebLoginButton Exit");
 
     } // onClickWebLoginButton
 
     // Callback function for clicking the login-logout button (LoginLogout.clickLoginLogoutButton)
     callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
     {
+        this.debugToConsole("callbackonClickWebLoginButton Enter");
+
         if (i_warning_msg.length > 0)
         {
             alert(i_warning_msg);
@@ -267,16 +361,22 @@ class WebLoginLogout
     
         this.getLoginLogoutObject().createSetControls(i_logged_in_name);
 
+        this.debugToConsole("callbackonClickWebLoginButton Exit");
+
     } // callbackonClickWebLoginButton
 
     // Callback function for LoginLogout.loginIfPossible
     callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
     {
+        this.debugToConsole("callbackWebLoginIfPossible Enter");
+
         this.setUserHasLoggedIn(i_b_user_has_logged_in);
 
         this.getLoginLogoutObject().createSetControls(i_logged_in_name);
 
         this.hideDisplayElements(i_b_user_has_logged_in);
+
+        this.debugToConsole("callbackWebLoginIfPossible Exit");
 
     } // callbackWebLoginIfPossible
 
@@ -291,13 +391,36 @@ class WebLoginLogout
     // Hide or display elements defined in array m_hide_display_elements
     hideDisplayElements(i_b_user_has_logged_in)
     {
+        this.debugToConsole("hideDisplayElements Enter");
+
         // TODO
+
+        this.debugToConsole("hideDisplayElements Exit");
 
     } // hideDisplayElements
 
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////// End Hide Display Application Elements ///////////
     ///////////////////////////////////////////////////////////////////////////  
+   ///////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////// Start Debug Functions ///////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////////////
+
+   // Writes debug to the console
+   debugToConsole(i_msg_str)
+   {
+       if (!this.m_write_debug_to_log)
+       {
+            return;
+       }
+
+       console.log('WebLoginLogout:' + i_msg_str);
+
+   } // debugToConsole    
+   
+   ///////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////// End Debug Functions /////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////////////
 
 } // WebLoginLogout
 

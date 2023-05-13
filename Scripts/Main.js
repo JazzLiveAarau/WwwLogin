@@ -1,5 +1,5 @@
 // File: Main.js
-// Date: 2023-05-08
+// Date: 2023-05-13
 // Author: Gunnar Lidén
 
 // Inhalt
@@ -15,6 +15,8 @@
 // Instance of the class WebLoginLogout
 var g_web_login_logout = null;
 
+// Flag telling debug data shall be written to console
+var g_write_debug_to_log = true;
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// End Global Parameters ///////////////////////////////////////////
@@ -30,6 +32,8 @@ var g_web_login_logout = null;
 // 3. 
 function initTestLogin()
 {
+    debugToConsole("initTestLogin Enter");
+
     var hide_display_elements = [];
     hide_display_elements[0] = getDivElementTestControlOne();
     hide_display_elements[1] = getDivElementTestControlTwo();
@@ -40,13 +44,19 @@ function initTestLogin()
     g_web_login_logout = new WebLoginLogout(getIdDivLoginLogout(), 
                           hide_display_elements, b_only_read_data);
 
+    debugToConsole("initTestLogin Object WebLoginLogout is created");
+
     g_web_login_logout.loadXml();
+
+    debugToConsole("initTestLogin Exit");
 
 } // initTestLoginLogout
 
 // Callback function after the creation of the application XML object
 function createLoginControlsAfterXml()
 {
+    debugToConsole("createLoginControlsAfterXml Enter");
+
     g_web_login_logout.createLoginControlsAfterXml();
    
 } // initTestAfterObjectCreation
@@ -54,12 +64,16 @@ function createLoginControlsAfterXml()
 // Event function user clicked the login-logout button
 function onClickWebLoginButton()
 {
+    debugToConsole("onClickWebLoginButton Enter");
+
     g_web_login_logout.onClickWebLoginButton();
 
 } // onClickWebLoginButton
 
 function callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg)
 {
+    debugToConsole("callbackonClickWebLoginButton Enter");
+
     g_web_login_logout.callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in, i_warning_msg);
     
 } // callbackonClickWebLoginButton
@@ -67,6 +81,8 @@ function callbackonClickWebLoginButton(i_logged_in_name, i_b_user_has_logged_in,
 // Callback function for LoginLogout.loginIfPossible
 function callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in)
 {
+    debugToConsole("callbackWebLoginIfPossible Enter");
+
     g_web_login_logout.callbackWebLoginIfPossible(i_logged_in_name, i_b_user_has_logged_in);
 
 } // callbackWebLoginIfPossible
@@ -119,6 +135,10 @@ function getIdDivElementTestControlTwo()
 ///////////////////////// End Get Id And Element Functions ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// Start Merge Functions ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
 // User clicked merge files
 function eventMergeFiles()
 {
@@ -145,4 +165,28 @@ function eventMergeFiles()
 	  
 
 } // eventMergeFiles
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// End Merge Functions /////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// Start Debug Functions ///////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// Write debug data to console
+function debugToConsole(i_msg_str)
+{
+    if (!g_write_debug_to_log)
+    {
+         return;
+    }
+
+    console.log('Main:' + i_msg_str);
+
+} // debugToConsole    
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// End Debug Functions /////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
 
