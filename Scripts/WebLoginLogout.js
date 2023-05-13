@@ -361,6 +361,8 @@ class WebLoginLogout
     
         this.getLoginLogoutObject().createSetControls(i_logged_in_name);
 
+        this.hideDisplayElements(i_b_user_has_logged_in);
+
         this.debugToConsole("callbackonClickWebLoginButton Exit");
 
     } // callbackonClickWebLoginButton
@@ -391,9 +393,30 @@ class WebLoginLogout
     // Hide or display elements defined in array m_hide_display_elements
     hideDisplayElements(i_b_user_has_logged_in)
     {
-        this.debugToConsole("hideDisplayElements Enter");
+        if (i_b_user_has_logged_in)
+        {
+            this.debugToConsole("hideDisplayElements Enter. Elements will be displayed");
+        }
+        else
+        {
+            this.debugToConsole("hideDisplayElements Enter. Elements will be hidden");
+        }
 
-        // TODO
+        var n_elements = this.m_hide_display_elements.length;
+
+        for (var index_el=0; index_el < n_elements; index_el++)
+        {
+            var current_el = this.m_hide_display_elements[index_el];
+
+            if (i_b_user_has_logged_in)
+            {
+                current_el.style.display = 'block';
+            }
+            else
+            {
+                current_el.style.display = 'none';
+            }
+        }
 
         this.debugToConsole("hideDisplayElements Exit");
 
@@ -402,9 +425,10 @@ class WebLoginLogout
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////// End Hide Display Application Elements ///////////
     ///////////////////////////////////////////////////////////////////////////  
-   ///////////////////////////////////////////////////////////////////////////////////////
-   ///////////////////////// Start Debug Functions ///////////////////////////////////////
-   ///////////////////////////////////////////////////////////////////////////////////////
+
+   ////////////////////////////////////////////////////////////////////////////
+   ///////////////////////// Start Debug Functions ////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
 
    // Writes debug to the console
    debugToConsole(i_msg_str)
@@ -418,9 +442,9 @@ class WebLoginLogout
 
    } // debugToConsole    
    
-   ///////////////////////////////////////////////////////////////////////////////////////
-   ///////////////////////// End Debug Functions /////////////////////////////////////////
-   ///////////////////////////////////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   ///////////////////////// End Debug Functions //////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
 
 } // WebLoginLogout
 
