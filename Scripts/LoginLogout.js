@@ -1126,7 +1126,9 @@ class LoginLogout
     {
         var ret_logged_in_name = "";
 
-        var user_login_name = g_web_login_logout.getUserNameObject().getUserName();
+        //QQQ var user_login_name = g_web_login_logout.getUserNameObject().getUserName();
+
+        var user_login_name = "Gunnar";
 
         var vorstands_array = [];
         vorstands_array[0] = "Laura";
