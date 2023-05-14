@@ -40,15 +40,32 @@ $file_name = $_POST['file_name'];
 $file_content = file_get_contents('../Scripts/JazzUserName.js');
 $file_content .= "\n" . file_get_contents('../Scripts/WebLoginLogout.js');
 $file_content .= "\n" . file_get_contents('../Scripts/LoginLogout.js');
-//QQQ Does not make sense $file_content .= "\n" . file_get_contents('../Php/LoginLogout.php');
 
-$fp = fopen($file_name, 'w');
+$dir_name= '../../JazzScripts/';
+
+$file_name_full = $dir_name . $file_name;
+
+$fp = fopen($file_name_full, 'w');
 if(!$fp)
-    die('Could not create / open text file for writing.');
+    die('Could not create / open js file for writing.');
 if(fwrite($fp, $file_content) === false)
-    die('Could not write to text file.');
+    die('Could not write to js file.');
 
-echo 'Files have been merged.';
+$file_content_php = file_get_contents('../Php/LoginLogout.php');
+
+$file_name_php = 'LoginLogout.php';
+
+$dir_name_php= '../../JazzScripts/Php/';
+
+$file_name_full_php = $dir_name_php . $file_name_php;
+
+$fp_php = fopen($file_name_full_php, 'w');
+if(!$fp_php)
+    die('Could not create / open php file for writing.');
+if(fwrite($fp_php, $file_content_php) === false)
+    die('Could not write to php file.');
+
+echo 'JavaScript files have been merged and PHP file has been copied.';
  
 ?>
  

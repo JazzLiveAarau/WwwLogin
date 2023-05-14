@@ -1,5 +1,5 @@
 // File: Main.js
-// Date: 2023-05-13
+// Date: 2023-05-14
 // Author: Gunnar Lidén
 
 // Inhalt
@@ -139,10 +139,13 @@ function getIdDivElementTestControlTwo()
 ///////////////////////// Start Merge Functions ///////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-// User clicked merge files
+// User clicked merge files. 
+// The JavaScript files will be merged to one file and written to the server directory
+// /www/JazzScripts/. The directory name is defined in file MergeLoginLogout.php.
+// Also the LoginLogout.php will be copied to the directory /www/JazzScripts/Php/.
 function eventMergeFiles()
 {
-    var file_name = '../../JazzScripts/LoginLogout_20230509.js';
+    var file_name = 'LoginLogout_20230514.js';
 
     $.post
       ('PhpMerge/MergeLoginLogout.php',
@@ -153,7 +156,8 @@ function eventMergeFiles()
 		{
             if (status_save == "success")
             {
-                // alert(data_save);
+                alert("JavaScript files merged to " + file_name + 
+                " and LoginLogout.php copied to server directory /www/JavaScripts/.");
             }
             else
             {
