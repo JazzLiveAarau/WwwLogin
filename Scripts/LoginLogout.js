@@ -1124,8 +1124,6 @@ class LoginLogout
     // Simulate a logged in name
     static simulateGetLoggedInName()
     {
-        this.debugToConsole("simulateGetLoggedInName Enter");
-
         var ret_logged_in_name = "";
 
         var user_login_name = g_web_login_logout.getUserNameObject().getUserName();
@@ -1160,8 +1158,6 @@ class LoginLogout
         
             ret_logged_in_name = vorstands_array[index_vorstand];
         }
-
-        this.debugToConsole("simulateGetLoggedInName Exit ret_logged_in_name= " + ret_logged_in_name);
 
         return ret_logged_in_name;
 
