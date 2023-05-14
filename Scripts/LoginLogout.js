@@ -215,7 +215,7 @@ class LoginLogout
 
                 var flag_logged_in = LoginLogout.extractUserLoggedInFlag(reply_str);
 
-                this.debugToConsole("loginIfPossible logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
+                //QQ Class not working this.debugToConsole("loginIfPossible logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
 
                 i_callback_login_if_possible(logged_in_name, flag_logged_in);
             }
@@ -308,7 +308,7 @@ class LoginLogout
 
                 var warning_msg = LoginLogout.getWarningMessage(reply_str);
 
-                this.debugToConsole("clickLoginLogoutButton logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in + " warning_msg= " + warning_msg);
+                //QQ Class not working this.debugToConsole("clickLoginLogoutButton logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in + " warning_msg= " + warning_msg);
 
                 i_callback_click_login_logout(logged_in_name, flag_logged_in, warning_msg);
             }
@@ -394,7 +394,7 @@ class LoginLogout
 
                 var flag_logged_in = LoginLogout.extractUserLoggedInFlag(reply_str);
 
-                this.debugToConsole("getLoggedInName logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
+                //QQ Class not working this.debugToConsole("getLoggedInName logged_in_name= " + logged_in_name + " flag_logged_in= " + flag_logged_in);
 
                 i_callback_get_logged_in_name(logged_in_name, flag_logged_in);
 
@@ -466,7 +466,7 @@ class LoginLogout
             {
                 var reply_trim_str = LoginLogout.removePhpEchoNewRowAndSpaces(reply_str);
 
-                this.debugToConsole("setLoggedInName reply_trim_str= " + reply_trim_str);
+                //QQ Class not working this.debugToConsole("setLoggedInName reply_trim_str= " + reply_trim_str);
 
                 i_callback_set_logged_in_name(reply_trim_str);
             }
