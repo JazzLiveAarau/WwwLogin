@@ -129,6 +129,10 @@ class WebLoginLogout
     {
         this.debugToConsole("loadXml Enter");
 
+        var b_user_has_logged_in = false;
+
+        this.hideDisplayElements(b_user_has_logged_in);
+
         if (!this.functionsAreDefined())
         {
             return;
