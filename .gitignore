@@ -365,12 +365,6 @@ FodyWeavers.xsd
 # JAZZ live AARAU XML file for tasks
 /Xml/
 
-# JAZZ live AARAU XML file test file for tasks
-/XmlTestData/
-
-# JAZZ live AARAU task documents (DOC and PDF)
-/Documents/
-
 # FTP configuration files
 # ftp-sync.json
 *.json
