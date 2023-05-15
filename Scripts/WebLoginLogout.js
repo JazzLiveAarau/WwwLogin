@@ -1,5 +1,5 @@
 // File: WebLoginLogout.js
-// Date: 2023-05-13
+// Date: 2023-05-15
 // Author: Gunnar Lidén
 
 // File content
@@ -13,13 +13,14 @@ class WebLoginLogout
     // id_div_login_logout:      Identity of the div placeholder for the menu
     // i_hide_display_elements:  Elements that shall be hidden if user not is logged in
     // i_b_only_read_data:       Flag telling if data only will be read (not changed or added)
+    // i_n_level_xml:            Directory levels to /www/XML/
     // Four (global) functions with following names must be defined. These functions
     // shall call a corresponding member function with the same name:
     // - createLoginControlsAfterXml
     // - onClickWebLoginButton
     // - callbackonClickWebLoginButton
     // - callbackWebLoginIfPossible
-    constructor(i_id_div_login_logout, i_hide_display_elements, i_b_only_read_data) 
+    constructor(i_id_div_login_logout, i_hide_display_elements, i_b_only_read_data, i_n_level_xml) 
     {
         // Member variables
         // ================
@@ -35,6 +36,9 @@ class WebLoginLogout
 
         // Flag telling if data only will be read (not changed or added)
         this.m_b_only_read_data = i_b_only_read_data;
+
+        // Directory levels to /www/XML/
+        this.m_n_level_xml = i_n_level_xml;
 
         // Call back function name used after creation of application XML object
         this.m_callback_function_xml = createLoginControlsAfterXml;
@@ -138,7 +142,7 @@ class WebLoginLogout
             return;
         }
 
-        this.m_application_xml = new JazzApplicationXml(this.m_callback_function_xml);
+        this.m_application_xml = new JazzApplicationXml(this.m_callback_function_xml, this.m_n_level_xml);
 
         this.debugToConsole("loadXml Object JazzApplicationXml created");
 

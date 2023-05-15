@@ -1,12 +1,11 @@
 // File: Main.js
-// Date: 2023-05-14
+// Date: 2023-05-15
 // Author: Gunnar Lidén
 
 // Inhalt
 // =============
 //
 // Main function for the test of member login and logout controls
-// This function 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// Start Global Parameters /////////////////////////////////////////
@@ -41,8 +40,11 @@ function initTestLogin()
     // Only read data for all applications except Admin Tasks
     var b_only_read_data = true;
 
+    // Number od directory levels to server directory /www/XML/
+    var n_level_xml = 1;
+
     g_web_login_logout = new WebLoginLogout(getIdDivLoginLogout(), 
-                          hide_display_elements, b_only_read_data);
+                          hide_display_elements, b_only_read_data, n_level_xml);
 
     debugToConsole("initTestLogin Object WebLoginLogout is created");
 
@@ -145,7 +147,7 @@ function getIdDivElementTestControlTwo()
 // Also the LoginLogout.php will be copied to the directory /www/JazzScripts/Php/.
 function eventMergeFiles()
 {
-    var file_name = 'LoginLogout_20230514.js';
+    var file_name = 'LoginLogout_20230515.js';
 
     $.post
       ('PhpMerge/MergeLoginLogout.php',
