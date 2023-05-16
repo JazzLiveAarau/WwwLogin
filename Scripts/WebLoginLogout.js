@@ -215,7 +215,7 @@ class WebLoginLogout
     
         this.m_login_logout = new LoginLogout(this.getIdLoginLogoutTextBox(), this.getIdLoginLogoutButton(), 
                                     this.m_id_div_login_logout, this.m_event_function_click_str,
-                                          user_name);
+                                          user_name, this.m_b_only_read_data);
 
         this.debugToConsole("createLoginControlsAfterXml Object LoginLogout is created");
     

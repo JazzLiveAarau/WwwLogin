@@ -1,5 +1,5 @@
 // File: LoginLogout.js
-// Date: 2023-05-13
+// Date: 2023-05-16
 // Author: Gunnar Lidén
 
 
@@ -21,8 +21,9 @@ class LoginLogout
     // i_id_div_container The identity of the <div> container for the textbox and button
     // i_button_event_function_name The name of the button event function. 
     // This event function must call the member event function onClickButton
+    // i_b_only_read_data       Flag telling if data only will be read (not changed or added)
     constructor(i_id_text_box_login_name, i_id_button_login_logout, i_id_div_container, 
-                i_button_event_function_name, i_user_name)
+                i_button_event_function_name, i_user_name, i_b_only_read_data)
     {
 
      ///////////////////////// Start Input parameters //////////////////////////////////////
@@ -41,6 +42,9 @@ class LoginLogout
 
         // User name
         this.m_user_name = i_user_name;
+
+        // Flag telling if data only will be read (not changed or added)
+        this.m_b_only_read_data = i_b_only_read_data;
 
      ///////////////////////// End Input parameters ////////////////////////////////////////      
      
@@ -679,6 +683,11 @@ class LoginLogout
             this.m_login_logout_button.setCaption(this.m_caption_logout);
     
             this.m_login_logout_button.setTitle(this.m_tooltip_button_logout); 
+
+            if (this.m_b_only_read_data)
+            {
+                this.m_login_logout_button.hideButton();
+            }
         }
         else if (i_login_name == LoginLogout.loginNameNobody())
         {
