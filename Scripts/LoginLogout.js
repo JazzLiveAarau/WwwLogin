@@ -1,11 +1,19 @@
 // File: LoginLogout.js
-// Date: 2023-05-16
+// Date: 2023-05-18
 // Author: Gunnar Lidén
 
 
 // Class with variables an functions that handle login and logout
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Please note that the file LoginLogout.php necessary for the login on the server
+// has to be copied to the subdirectory /Php/ of the web application (web page) that
+// is using this class.
+// The file LoginLogout.php is NOT used for applications that only read data, i.e.
+// when the past parameter i_b_only_read_data is true.
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // Here is a sample how an object of the class can be created:
-// var my_login = new LoginLogout("id_text_box", "id_button", "i_id_container", i_event_fctn, "user_name")
+// var my_login = new LoginLogout("id_text_box", "id_button", "i_id_container", 
+//                                i_event_fctn, "user_name", i_b_only_read_data)
 class LoginLogout
 {
 

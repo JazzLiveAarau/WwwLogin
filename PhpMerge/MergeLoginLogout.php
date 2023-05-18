@@ -51,21 +51,21 @@ if(!$fp)
 if(fwrite($fp, $file_content) === false)
     die('Could not write to js file.');
 
-$file_content_php = file_get_contents('../Php/LoginLogout.php');
+//NotUsed $file_content_php = file_get_contents('../Php/LoginLogout.php');
 
-$file_name_php = 'LoginLogout.php';
+//NotUsed $file_name_php = 'LoginLogout.php';
 
-$dir_name_php= '../../JazzScripts/Php/';
+//NotUsed $dir_name_php= '../../JazzScripts/Php/';
 
-$file_name_full_php = $dir_name_php . $file_name_php;
+//NotUsed $file_name_full_php = $dir_name_php . $file_name_php;
 
-$fp_php = fopen($file_name_full_php, 'w');
-if(!$fp_php)
-    die('Could not create / open php file for writing.');
-if(fwrite($fp_php, $file_content_php) === false)
-    die('Could not write to php file.');
+//NotUsed $fp_php = fopen($file_name_full_php, 'w');
+//NotUsed if(!$fp_php)
+//NotUsed     die('Could not create / open php file for writing.');
+//NotUsed if(fwrite($fp_php, $file_content_php) === false)
+//NotUsed    die('Could not write to php file.');
 
-echo 'JavaScript files have been merged and PHP file has been copied.';
+echo 'JavaScript files have been merged.';
  
 ?>
  
