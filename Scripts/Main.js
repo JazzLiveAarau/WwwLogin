@@ -152,7 +152,7 @@ function getIdDivElementTestControlTwo()
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function eventMergeFiles()
 {
-    var file_name = 'LoginLogout_20230515.js';
+    var file_name = 'LoginLogout_20230518.js';
 
     $.post
       ('PhpMerge/MergeLoginLogout.php',

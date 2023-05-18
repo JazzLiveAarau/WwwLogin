@@ -1,5 +1,5 @@
 // File: WebLoginLogout.js
-// Date: 2023-05-15
+// Date: 2023-05-18
 // Author: Gunnar Lidén
 
 // File content
@@ -100,12 +100,26 @@ class WebLoginLogout
 
     } // setUserHasLoggedIn
 
-   // Returns the object JazzUserName
-   getUserNameObject()
-   {
-    return this.m_user_name_object
+    // Returns the object JazzUserName
+    getUserNameObject()
+    {
+        return this.m_user_name_object
 
-   } // getUserNameObject
+    } // getUserNameObject
+
+    // Returns the user name
+    getUserName()
+    {
+        return this.getUserNameObject().getUserName();
+
+    } // getUserName
+
+    // Returns the application XML object
+    getApplicationXmlObject()
+    {
+        return this.m_application_xml;
+        
+    } // getApplicationXmlObject
 
     // Returns the identity of the login and logout button
     getIdLoginLogoutButton()
