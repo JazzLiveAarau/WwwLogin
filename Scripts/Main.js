@@ -1,11 +1,21 @@
 // File: Main.js
-// Date: 2023-05-16
+// Date: 2023-12-13
 // Author: Gunnar Lidén
 
-// Inhalt
-// =============
+// Content
+// =======
 //
 // Main function for the test of member login and logout controls
+//
+// The function eventMergeFiles uploads the JavaScript files to the server directory 
+// JazzScripts. In eventMergeFiles is also the name of the merged file defined. The
+// name of the file is LoginLogout_yyyymmdd.
+//
+// The JavaScripts files that shall be merged are defined in the file MergeControls.php
+//
+// Files from the local directory WwwControls shall be uploaded to the server direcory
+// www/WwwLogin. Please note that the merge PHP function only works for the uploaded
+// files, i.e. the HTML web page https://www.jazzliveaarau.ch/WwwControls/TestControls.htm
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// Start Global Parameters /////////////////////////////////////////
@@ -145,7 +155,7 @@ function getIdDivElementTestControlTwo()
 // The JavaScript files will be merged to one file and written to the server directory
 // /www/JazzScripts/. The directory name is defined in file MergeLoginLogout.php.
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Please note that the file LoginLogout.php necessary for the login on the server
+// Please note that the file LoginLogout.php is necessary for the login on the server
 // has to be copied to the subdirectory /Php/ of the web application (web page) that
 // is using the library of login functions (the files that are merged here).
 // Using a relative or absolute path to /www/JazzScripts/Php/ seems to be impossible
